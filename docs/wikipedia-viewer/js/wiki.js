@@ -7,7 +7,7 @@
  * 3. Clicking on an article opens a new window with Wikipedia
 */
 
-(function() {
+$(document).ready(function() {
 
   var dom = {};
   dom.instructions = document.getElementById("instructions");
