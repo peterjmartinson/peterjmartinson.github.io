@@ -1,3 +1,20 @@
+section#about {
+  position: relative;
+  background: #0c1c45;
+}
+
+#about-box {
+  position: absolute;
+  width: 67%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+
+
+
+
 section#portfolio {
   text-align: center;
 }
