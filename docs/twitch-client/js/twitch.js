@@ -102,4 +102,3 @@ twitch.fetchStreamer('cretetion', twitch.fetchJSON);
 twitch.fetchStreamer('brunofin', twitch.fetchJSON);
 twitch.fetchStreamer('comster404', twitch.fetchJSON);
 
->>>>>>> 8a9e79bd9d3458e6d5404cc94e5184dd5293e139
