@@ -68,7 +68,7 @@ $(document).ready(function() {
 
   dom.search.onclick = function() {
     var val = dom.search.form.searchy.value.replace(/\s+/g,'%20');
-    var wiki_url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=' + val;
+    var wiki_url = 'https://en.wikipedia.org/w/api.php?action=query&format=jsonp&list=search&srsearch=' + val;
     // var wiki_url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=' + val;
     dom.results.innerHTML = 'Searching...';
     $.get(wiki_url, function(response) {
