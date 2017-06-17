@@ -1,0 +1,59 @@
+/**
+ * Styling for Portfolio 2.0
+ * Copyright 2017 Peter Martinson
+*/
+
+html {
+  font-size:    10px;
+  font-family:  'EB Garamond',serif;
+  color:        black;
+  background:   white;
+  border:       0px;
+  border-bottom: 5px solid black;
+  min-height:   100vh;
+  margin:       0px;
+  padding:      0px;
+}
+
+body {
+  font-size: 2rem;
+  margin: 4px 0px 0px 0px;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+main {
+}
+
+section {
+}
+
+header {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color:  gray;
+  margin: 16px;
+}
+
+header .name {
+  display: inline-block;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header .icon {
+  display:     inline-block;
+  background:  url(../assets/st_icon_bw_64.png) no-repeat;
+  width:       64px;
+  height:      64px;
+  margin:      0px;
+  padding:     0px;
+}
+
