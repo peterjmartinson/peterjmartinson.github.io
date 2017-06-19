@@ -58,7 +58,37 @@ main {
 }
 
 section {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
+
+.work {
+  text-align: center;
+}
+
+.work a {
+  /* margin: 5px; */
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  z-index: 0;
+}
+
+.work a:hover {
+  box-shadow: 0px 0px 5px 5px orange;
+  border: 1px solid orange;
+  background: orange;
+  z-index: 1;
+}
+
+footer {
+}
+
+
 
 @media all and (min-width: 720px) {
 
