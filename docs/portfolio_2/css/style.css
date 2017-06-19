@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 4px 0px 0px 0px;
 }
 
@@ -29,11 +29,21 @@ h2 {
 h3 {
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  box-shadow: 0px 0px 5px 5px orange;
+  background: orange;
+}
+
 header {
   font-family: 'Quattrocento Sans', sans-serif;
   color:  gray;
   margin: 16px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #cecece;
 }
 
 header .icon {
@@ -54,13 +64,14 @@ header .name {
 }
 
 main {
+  font-size: 2rem;
   margin: 16px;
 }
 
 section {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #cecece;
 }
 
 .work {
@@ -68,24 +79,34 @@ section {
 }
 
 .work a {
-  /* margin: 5px; */
   position: relative;
   display: inline-block;
   padding: 10px;
   border: 1px solid black;
-  text-decoration: none;
-  color: black;
   z-index: 0;
 }
 
 .work a:hover {
-  box-shadow: 0px 0px 5px 5px orange;
   border: 1px solid orange;
-  background: orange;
   z-index: 1;
 }
 
 footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin: 16px;
+}
+
+footer div {
+  flex-grow: 1;
+  display: inline-block;
+}
+
+footer span {
+  display: block;
+  font-family:  'EB Garamond',serif;
 }
 
 
