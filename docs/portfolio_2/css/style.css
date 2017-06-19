@@ -29,31 +29,57 @@ h2 {
 h3 {
 }
 
+header {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color:  gray;
+  margin: 16px;
+  border-bottom: 1px solid gray;
+}
+
+header .icon {
+  display:     block;
+  background:  url(../assets/st_icon_bw_64.png) no-repeat;
+  width:       64px;
+  height:      64px;
+  margin:      0 auto;
+  padding:     0px;
+}
+
+header .name {
+  display: block;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
 main {
+  margin: 16px;
 }
 
 section {
 }
 
-header {
-  font-family: 'Quattrocento Sans', sans-serif;
-  color:  gray;
-  margin: 16px;
-}
-
-header .name {
-  display: inline-block;
-  margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+@media all and (min-width: 720px) {
 
 header .icon {
   display:     inline-block;
   background:  url(../assets/st_icon_bw_64.png) no-repeat;
   width:       64px;
   height:      64px;
-  margin:      0px;
+  /* margin:      0 auto; */
   padding:     0px;
 }
 
+header .name {
+  display: inline;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+
+
+
+}
