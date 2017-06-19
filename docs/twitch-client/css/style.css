@@ -194,13 +194,14 @@ footer #social {
 }
 
 footer #social a {
-  color:            #552f00;
-  background:       #ffd9aa;
+  display:          inline-block;
+  color:            #0c1c45;
+  background:       #bec6da;
   text-decoration:  none;
   font-weight:      normal;
   margin:           4px;
   padding:          4px 4px 2px 4px;
-  border:           1px solid #ffd9aa;
+  border:           1px solid #bec6da;
   border-radius:    2px;
 }
 

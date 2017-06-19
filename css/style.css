@@ -62,7 +62,7 @@ section p {
 
 header {
   display:     block;
-  height:      64px;
+  min-height:      64px;
   background:  #0c1c45;
   color:       #bec6da;
   margin:      0px;
@@ -90,26 +90,28 @@ header a {
 
 header #icon-container {
   display:     block;
-  margin:      0px;
+  margin:      auto;
   padding:     0px;
 }
   
 header #icon {
-  display:     inline-block;
+  display:     block;
   background:  url(../assets/st_icon_bb_64.png) no-repeat;
   width:       64px;
   height:      64px;
-  margin:      0px;
+  margin:      auto;
   padding:     0px;
 }
 
 header #icon-title {
-  display:      inline;
+  display:      block;
   font-size:    3rem;
   font-weight:  bold;
-  float:        right;
-  margin:       0px;
+  text-align:   center;
+  /* float:        right; */
+  margin:       auto;
   padding-top:  17px;
+  padding-bottom: 10px;
 }
 
 header #name, #subtitle, #menu {
@@ -189,10 +191,11 @@ footer #social {
 }
 
 footer #social a {
+  display:          inline-block;
   color:            #0c1c45;
   background:       #bec6da;
   text-decoration:  none;
-  font-weight:      bold;
+  font-weight:      normal;
   margin:           4px;
   padding:          4px 4px 2px 4px;
   border:           1px solid #bec6da;
@@ -209,7 +212,25 @@ footer #social a:hover {
 /**
  * desktop media query
 */
+
 @media all and (min-width: 720px) {
+  header #icon-container {
+    margin:      0px;
+  }
+    
+  header #icon {
+    display:     inline-block;
+    margin:      0px;
+  }
+
+  header #icon-title {
+    display:      inline;
+    float:        right;
+    margin:       0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
 
   main {
     margin-left: 320px;
