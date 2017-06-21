@@ -44,6 +44,7 @@ header {
   color:  gray;
   margin: 16px;
   border-bottom: 1px solid #cecece;
+  max-width: 60rem;
 }
 
 header .icon {
@@ -124,11 +125,12 @@ header .icon {
 }
 
 header .name {
-  display: inline;
-  margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: right;
+  float: right;
+  /* display: inline; */
+  /* margin: 0px; */
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+  /* text-align: right; */
 }
 
 
