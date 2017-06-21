@@ -95,17 +95,12 @@ section {
 }
 
 footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   font-family: 'Quattrocento Sans', sans-serif;
   margin: 16px;
-  /* max-width: 60rem; */
 }
 
 footer div {
-  flex-grow: 1;
-  display: inline-block;
+  margin-bottom: 16px;
 }
 
 footer span {
@@ -138,4 +133,22 @@ header .name {
   display:     inline-block;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Quattrocento Sans', sans-serif;
+  margin: 16px;
+  /* max-width: 60rem; */
+}
+
+footer div {
+  flex-grow: 1;
+  display: inline-block;
+}
+
+footer span {
+  display: block;
+  font-family:  'EB Garamond',serif;
+}
 }
