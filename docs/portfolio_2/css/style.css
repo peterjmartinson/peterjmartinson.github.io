@@ -72,6 +72,7 @@ section {
   margin-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #cecece;
+  max-width: 60rem;
 }
 
 .work {
