@@ -41,7 +41,19 @@ a {
   font-size: 1rem;
   overflow: auto;
   max-height: 10rem;
+  padding: 8px;
 }
+
+code {
+  font-family: 'Courier', monospace;
+  /* font-weight: bold; */
+  font-size: 1.2rem;
+  background: #cecece;
+  color: black;
+  padding: 2px 4px 2px 4px;
+  border-radius: 1px;
+}
+  
 
 header {
   font-family: 'Quattrocento Sans', sans-serif;
@@ -127,11 +139,13 @@ section {
   text-align: center;
   margin-top: 16px;
 }
+
 .project-links a {
   background: gray;
   color: white;
   padding: 4px;
   border-radius: 2px;
+  margin: 4px;
 }
 
 .project-links a:hover {

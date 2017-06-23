@@ -8,7 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css" media="all">
-  <link rel="stylesheet" href="css/desert.css" media="all">
+  <link rel="stylesheet" href="css/obsidian.css" media="all">
 
   <title>PJM | Pengo</title>
 </head>
@@ -32,57 +32,74 @@
     </section>
     <h2>Description</h2>
     <section>
-      Pengo is a custom slash command for Slack.  I built it with three others in a group called <a href="#">{Chingu Cohorts}</a>, a subset of <a href="#">{freeCodeCamp}</a> students.  The original specifications called for duplicating the capabilities of the <a href="https://goodfuckingdesignadvice.com/blogs/features/gfda-launches-slack-app">{GFDA Slack app}</a>, but with an added function of our choosing.  I suggested we make our app utter tips from the book <a href="https://pragprog.com/the-pragmatic-programmer/extracts/tips">{The Pragmatic Programmer}</a>.  Then, since I spend a lot of time at the command line, I thought it would be fun to add a command line reference to the app.  Finally, the name Pengo struck like a bolt of pure electricity.  Our cohort was called the Chingu Penguins - Pengo is an old Sega game featuring a penguin.  Pengo was also the handle of an infamous East German hacker named Hans Heinrich H&uuml;bner, so this would help remind everyone that coders are bad asses.
+      Pengo is a custom slash command for Slack.  I built it with three others in a group called <a href="https://tropicalchancer.github.io/projectus/" target="_blank">{Chingu Cohorts}</a>, a subset of <a href="https://www.freecodecamp.com" target="_blank">{freeCodeCamp}</a> students.  The original specifications called for duplicating the capabilities of the <a href="https://goodfuckingdesignadvice.com/blogs/features/gfda-launches-slack-app" target="_blank">{GFDA Slack app}</a>, but with an added function of our choosing.  I suggested we make our app utter tips from the book <a href="https://pragprog.com/the-pragmatic-programmer/extracts/tips" target="_blank">{The Pragmatic Programmer}</a>.  Then, since I spend a lot of time at the command line, I thought it would be fun to add a command line reference to the app.  Finally, the name Pengo struck like a bolt of pure electricity.  Our cohort was called the Chingu Penguins - Pengo is an old Sega game featuring a penguin.  Pengo was also the handle of an infamous East German hacker named Hans Heinrich H&uuml;bner, so this would help remind everyone that coders are bad asses.
     </section>
     <h2>Execution</h2>
     <section>
-      The app is run with a Node.js backend hosted on Heroku with all requests handled with Express.  The quotes are hosted on mLabs and accessed with Mongoose, while the command line reference is hosted on <a href="http://man.he.net">{http://man.he.net}</a> and accessed with Cheerio.  My role in the whole affair, besides the concept, was to design the MongoDB interface and the command line reference.
+      The app is run with a Node.js backend hosted on Heroku with all requests handled with Express.  The quotes are hosted on mLabs and accessed with Mongoose, while the command line reference is hosted on <a href="http://man.he.net" target="_blank">{http://man.he.net}</a> and accessed with Cheerio.  My role in the whole affair, besides the concept, was to design the MongoDB interface and the command line reference.
+      <h3>Mongoose</h3>
+       Getting quotes is performed with two custom functions, <code>byID</code> and <code>atRandom</code>.  Both use Mongoose's function <code>.count()</code>, <code>byID</code> to ensure the ID is in range, and <code>atRandom</code> to perform random ID selection.  Then, <code>.find()</code> is called to retrieve the actual quote.  
 
+<pre class="prettyprint linenums">
+module.exports = {
 
-<pre class="prettyprint">
-/* 
- * /pengo
- *
- * Returns a random message
-*/
-else {
-  getQuote.atRandom(function(err, quote) {
-    if (err) console.error(err);
-    let mainQuote = quote[0].quote;
-    let quoteId = quote[0].quote_id;
-    let quoteSource = quote[0].source;
-    let subQuote = quote[0].subquote;
-    let quoteSourceUrl = quote[0].source_href;
+  byID: function(id, callback) {
+    Quote.count({}, function(err, N) {
+      if (err) callback(err);
+      if ( id > 0 && id <= N ) {
 
-    let data = {
-      "response_type": "in_channel",
-      "text": "*" + mainQuote + "*",
-      "attachments": [
-        {
-          "text": subQuote + "\n" + "<" + quoteSourceUrl + "|" + quoteSource + " #" + quoteId + ">",
-          "color": "good",
-          "footer": "<https://pengo.herokuapp.com | Get Pengo>" + " | "  + "<https://github.com/peterjmartinson/PengoBot | GitHub>",
-          "mrkdwn_in": ["text"]
-        }
-      ]
-    }
-    response.send(data);
-  });
+        Quote.find({ quote_id : id }, function(err, result) {
+          if (err) callback(err);
+          else     callback(null, result);
+        });
+
+      }
+      else {
+        // User entered an out-of-range ID
+        callback(null,{ bad_number:1, N:N});
+      }
+    });
+  },
+
+  atRandom: function(callback) {
+    Quote.count({}, function(err, N) {
+      if (err) callback(err);
+      var id = Math.floor(Math.random() * N);
+
+      Quote.find({ quote_id : id }, function(err, result) {
+        if (err) callback(err);
+        else     callback(null, result, id);
+      });
+
+    });
+  }
 }
 </pre>
 
+      <h3>Command Line Reference</h3>
+      This part proved more challenging.  First, it required scraping the website <a href="http://man.he.net" target="_blank">{http://man.he.net}</a>, which contains Man pages for Unix commands, for the correct command.  Second, it required selecting the most relevant sections.  Third, for enormous command references (like <code>gcc</code>), it required some way to limit the output.  Web scraping was the easiest to perform, by using npm-request to make a XMLHttpRequest to the site, and then npm-cheerio to pick out the part of the website that contains the command reference.  To select relevant sections, the text was broken into an array, where each element is a line of text.  Then, I used regular expressions to hunt down the section headings and populate a table of contents.
 
+<pre class="prettyprint linenums">
+// create TOC numbers
+command_array.forEach(function(element, index) {
+  if ( /^[A-Z]/.test(element) ) {
+    toc.push(index);
+  }
+});
 
+// create TOC section labels
+toc.forEach(function(element) {
+  sections.push(command_array[element]);
+});
+</pre>
 
-
-      How the Mongoose part works
-      Error handling
-      General structure of the rest of the app.
+      Finally, these were used to create individual sections that contained no more than 20 lines each.  The sections get created on the fly and are returned to the callback as simple strings.  Formatting of the original website was preserved.  Since I want people to actually learn the commands, I added a link to the original page in case the sections were longer than 20 lines.  Only sections I found to always exist were included.
+      <h3>Future Plans</h3>
+      Relevant to my goal that people want to learn the CLI, I plan to add a fuzzy match to <code>/pengo bash &lt;cmd&gt;</code>.  This way, if someone enters a command that doesn't exist (e.g. <code>/pengo bash ct</code>), Pengo will offer suggestions for similarly spelled commands.
     </section>
     <section class="project-links">
-    <!-- <div class="project-links"> -->
-      <a href="#">Homepage</a>
-    <!-- </div> -->
+      <a href="http://pengo.herokuapp.com" target="_blank">Homepage</a>
+      <a href="https://github.com/peterjmartinson/PengoBot" target="_blank">Source</a>
     </section>
   </main>
 
