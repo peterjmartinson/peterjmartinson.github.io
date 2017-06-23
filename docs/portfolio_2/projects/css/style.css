@@ -21,6 +21,7 @@ body {
 }
 
 h1 {
+  font-size: 3rem;
 }
 
 h2 {
@@ -31,13 +32,9 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
-a:hover {
-  box-shadow: 0px 0px 5px 5px orange;
-  background: orange;
-}
 
 header {
   font-family: 'Quattrocento Sans', sans-serif;
@@ -72,11 +69,16 @@ main {
   border-bottom: 1px solid #cecece;
 }
 
+main a:hover,footer a:hover {
+  box-shadow: 0px 0px 5px 5px orange;
+  background: orange;
+}
+
 section {
   margin-top: 10px;
   padding-bottom: 10px;
   /* border-bottom: 1px solid #cecece; */
-  max-width: 60rem;
+  max-width: 40rem;
 }
 
 .work {
@@ -98,6 +100,13 @@ section {
 
 .project-splash {
   text-align: center;
+}
+
+.project-splash img {
+  box-shadow: 0px 0px 2px 2px #cecece;
+  border: 1px solid #cecece;
+  margin-bottom: 32px;
+  max-width: 34rem;
 }
 
 .tags span {
@@ -139,6 +148,10 @@ footer span {
   font-family:  'EB Garamond',serif;
 }
 
+/* footer a:hover { */
+/*   box-shadow: 0px 0px 5px 5px orange; */
+/*   background: orange; */
+/* } */
 
 
 @media all and (min-width: 720px) {
@@ -163,6 +176,15 @@ header .icon {
 header .name {
   display:     inline-block;
 }
+
+section {
+  max-width: 60rem;
+}
+
+.project-splash img {
+  max-width: 60rem;
+}
+
 
 footer {
   display: flex;

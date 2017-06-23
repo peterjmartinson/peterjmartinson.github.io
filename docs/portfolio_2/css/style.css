@@ -96,6 +96,7 @@ section {
 
 footer {
   font-family: 'Quattrocento Sans', sans-serif;
+  color: gray;
   margin: 16px;
 }
 
@@ -106,6 +107,7 @@ footer div {
 footer span {
   display: block;
   font-family:  'EB Garamond',serif;
+  color: black;
 }
 
 
