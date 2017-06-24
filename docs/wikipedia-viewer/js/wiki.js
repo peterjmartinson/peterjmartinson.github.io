@@ -72,7 +72,6 @@ $(document).ready(function() {
     $.get(wiki_url, function(response) {
       dom.results.innerHTML = listResults(response);
     });
-
   }
 
 }());
