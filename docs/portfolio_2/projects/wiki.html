@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <link rel="stylesheet" href="css/obsidian.css" media="all">
+
+  <title>PJM | Wikipedia Viewer</title>
+</head>
+<body>
+  <a href="../index.html">
+    <header>
+      <div class="name"><span>PETER J. MARTINSON</span></div>
+      <div class="icon"></div>
+    </header>
+  </a>
+
+  <main>
+    <section class="project-splash">
+      <h1>Pengo</h1>
+      <img src="#" alt="Responsive examples of Wikipedia Viewer page">
+      <div class="tags">
+        <span>#AJAX</span>
+        <span>#HTML</span>
+        <span>#CSS</span>
+      </div>
+    </section>
+    <h2>Description</h2>
+    <section>
+      Wikipedia Viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.  It consists of a search bar and a list of result links that will open Wikipedia entries.
+    </section>
+    <h2>Execution</h2>
+    <section>
+
+      <p>This project used the <a href="#">{Wikipedia API}</a>.  It provides a simple endpoint for random articles, <code><a href="#">https://en.wikipedia.org/wiki/Special:Random</a></code>, so a new browser window is simply opened with this address.  To perform a search, jQuery's <code>$.get()</code> function is used, which returns a JSON object that contains a list of results.  This object is parsed, and turned into an unordered list of links under the search bar.  Clicking on any one opens the link in a new browser window.</p>
+<pre class="prettyprint linenums">
+
+</pre>
+      <p>Because I generally don't like the usual HTML link decorations (blue text, underline), I made each of the links a plain blue rectangle, that displays an orange highlight at the left edge when under the mouse pointer.</p>
+      <h3>Mongoose</h3>
+       Getting quotes is performed with two custom functions, <code>byID</code> and <code>atRandom</code>.  Both use Mongoose's function <code>.count()</code>, <code>byID</code> to ensure the ID is in range, and <code>atRandom</code> to perform random ID selection.  Then, <code>.find()</code> is called to retrieve the actual quote.  
+
+<pre class="prettyprint linenums">
+module.exports = {
+
+  byID: function(id, callback) {
+    Quote.count({}, function(err, N) {
+      if (err) callback(err);
+      if ( id > 0 && id <= N ) {
+
+        Quote.find({ quote_id : id }, function(err, result) {
+          if (err) callback(err);
+          else     callback(null, result);
+        });
+
+      }
+      else {
+        // User entered an out-of-range ID
+        callback(null,{ bad_number:1, N:N});
+      }
+    });
+  },
+
+  atRandom: function(callback) {
+    Quote.count({}, function(err, N) {
+      if (err) callback(err);
+      var id = Math.floor(Math.random() * N);
+
+      Quote.find({ quote_id : id }, function(err, result) {
+        if (err) callback(err);
+        else     callback(null, result, id);
+      });
+
+    });
+  }
+}
+</pre>
+
+      <h3>Command Line Reference</h3>
+      This part proved more challenging.  First, it required scraping the website <a href="http://man.he.net" target="_blank">{http://man.he.net}</a>, which contains Man pages for Unix commands, for the correct command.  Second, it required selecting the most relevant sections.  Third, for enormous command references (like <code>gcc</code>), it required some way to limit the output.  Web scraping was the easiest to perform, by using npm-request to make a XMLHttpRequest to the site, and then npm-cheerio to pick out the part of the website that contains the command reference.  To select relevant sections, the text was broken into an array, where each element is a line of text.  Then, I used regular expressions to hunt down the section headings and populate a table of contents.
+
+<pre class="prettyprint linenums">
+// create TOC numbers
+command_array.forEach(function(element, index) {
+  if ( /^[A-Z]/.test(element) ) {
+    toc.push(index);
+  }
+});
+
+// create TOC section labels
+toc.forEach(function(element) {
+  sections.push(command_array[element]);
+});
+</pre>
+
+      Finally, these were used to create individual sections that contained no more than 20 lines each.  The sections get created on the fly and are returned to the callback as simple strings.  Formatting of the original website was preserved.  Since I want people to actually learn the commands, I added a link to the original page in case the sections were longer than 20 lines.  Only sections I found to always exist were included.
+      <h3>Future Plans</h3>
+      Relevant to my goal that people want to learn the CLI, I plan to add a fuzzy match to <code>/pengo bash &lt;cmd&gt;</code>.  This way, if someone enters a command that doesn't exist (e.g. <code>/pengo bash ct</code>), Pengo will offer suggestions for similarly spelled commands.
+    </section>
+    <section class="project-links">
+      <a href="http://pengo.herokuapp.com" target="_blank">Homepage</a>
+      <a href="https://github.com/peterjmartinson/PengoBot" target="_blank">Source</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      COPYRIGHT 2017
+      <span>Peter J. Martinson</span>
+    </div>
+    <div class="contact">
+      CONTACT
+      <span>
+        <a href="mailto:peter.j.martinson@gmail.com">
+          peter.j.martinson@gmail.com
+        </a>
+      </span>
+    </div>
+    <div class="navigation">
+      NAVIGATION
+      <span>
+        <a href="#">Home </a>&#151;
+        <a href="http://stonetelescope.wordpress.com">Stories </a>&#151;
+        <a href="#">Twitter</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>
+

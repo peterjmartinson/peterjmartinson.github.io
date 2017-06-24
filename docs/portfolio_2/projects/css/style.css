@@ -146,6 +146,7 @@ section {
   padding: 4px;
   border-radius: 2px;
   margin: 4px;
+  font-size: 2rem;
 }
 
 .project-links a:hover {
