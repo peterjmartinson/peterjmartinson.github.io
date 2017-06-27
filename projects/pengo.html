@@ -13,12 +13,12 @@
   <title>PJM | Pengo</title>
 </head>
 <body>
-  <a href="../index.html">
-    <header>
+  <header>
+    <a href="../index.html">
       <div class="name"><span>PETER J. MARTINSON</span></div>
       <div class="icon"></div>
-    </header>
-  </a>
+    </a>
+  </header>
 
   <main>
     <section class="project-splash">
@@ -126,5 +126,21 @@ toc.forEach(function(element) {
     </div>
   </footer>
 
+  <script type="text/javascript">
+    var a = document.getElementsByTagName('a'),
+        r = Math.random() * 256,
+        g = Math.random() * 256,
+        b = Math.random() * 256,
+        css = 'a:hover { box-shadow: 0px 0px 5px 5px rgb(' + r + ',' + g + ',' + b + '); background: rgb(' + r + ',' + g + ',' + b + ');}',
+        style = document.createElement('style');
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    for ( var i = 0; i < a.length; i++) {
+      a[i].appendChild(style);
+    }
+  </script>
 </body>
 </html>

@@ -22,7 +22,7 @@
     <p>My preferred stack is JavaScript and Node.js, though I have dabbled in LAMP.  My PHP goes further back, but for the last two years I have been teaching myself JavaScript through sundry resources, like <a href="#">{freeCodeCamp}</a>.  Examples of my project are live on <a href="#">{CodePen}</a> and raw on <a href="#">{GitHub}</a>.  Getting close to the <strong>edge</strong> is my passion &#151; Code that is terse yet pleasant to read, science that straddles <a href="http://stonetelescope.wordpress.com">{astrophysics and geology}</a>.  My JavaScript is so clean it can be sung to a baby.  My SQL inner joins to outer space.  Please see case studies of my work below.</p>
   </section> <!-- summary -->
   <section class="work">
-    <a href="./projects/pengo.html">/pengo</a><a href="#">Portfolio, v1.0</a><a href="./projects/wiki.html">Wikipedia Viewer</a><a href="#">TwitchTV Client</a><a href="#">Random Quote Generator</a>
+<a href="./projects/pengo.html">/pengo</a><!-- <a href="#">Portfolio, v1.0</a> --><a href="./projects/wiki.html">Wikipedia Viewer</a><!-- <a href="#">TwitchTV Client</a> --><!-- <a href="#">Random Quote Generator</a> -->
   </section> <!-- work -->
   </main>
 
@@ -48,5 +48,23 @@
       </span>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    var a = document.getElementsByTagName('a'),
+        r = Math.random() * 256,
+        g = Math.random() * 256,
+        b = Math.random() * 256,
+        css = 'a:hover { box-shadow: 0px 0px 5px 5px rgb(' + r + ',' + g + ',' + b + '); background: rgb(' + r + ',' + g + ',' + b + ');}',
+        style = document.createElement('style');
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    for ( var i = 0; i < a.length; i++) {
+      a[i].appendChild(style);
+    }
+  </script>
+
 </body>
 </html>
