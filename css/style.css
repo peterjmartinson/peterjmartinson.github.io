@@ -4,9 +4,10 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans');
+
 html {
   font-size:      10px;
-  font-family:    'EB Garamond',serif;
+  font-family:    'EB Garamond','Times New Roman',serif;
   color:          black;
   background:     white;
   border:         0px;
@@ -43,12 +44,11 @@ a:hover {
 }
 
 header {
-  font-family:     'Quattrocento Sans', sans-serif;
+  font-family:     'Quattrocento Sans', 'Helvetica',sans-serif;
+  font-size:       1.2rem;
   color:           gray;
   margin:          16px 16px 16px 16px;
-  border-bottom:   1px solid #cecece;
   padding-bottom:  16px;
-  /* max-width: 60rem; */
 }
 
 header .icon {
@@ -71,13 +71,15 @@ header .name {
 main {
   font-size:    1.5rem;
   line-height:  1.5;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
   margin: 16px;
 }
 
 section {
   margin-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #cecece;
+  /* border-bottom: 1px solid #cecece; */
   max-width: 60rem;
 }
 
@@ -101,7 +103,8 @@ section {
 }
 
 footer {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family:     'Quattrocento Sans', 'Helvetica',sans-serif;
+  font-size:       1.2rem;
   color: gray;
   margin: 16px;
 }
@@ -133,6 +136,7 @@ main{
 
 header {
   margin-top:  64px;
+  font-size:   1.7rem;
 }
 
 header .icon {
@@ -147,6 +151,7 @@ header .name {
 }
 
 footer {
+  font-size:   1.7rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
