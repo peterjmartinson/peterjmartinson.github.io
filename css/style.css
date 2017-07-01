@@ -51,6 +51,10 @@ header {
   padding-bottom:  16px;
 }
 
+header a {
+  color: gray;
+}
+
 header .icon {
   display:     block;
   background:  url(../assets/st_icon_bw_64.png) no-repeat;
