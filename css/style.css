@@ -130,6 +130,7 @@ body {
 }
 
 main{
+  clear: both;
   font-size:    2rem;
   line-height:  1.5;
 }
@@ -137,6 +138,7 @@ main{
 header {
   margin-top:  64px;
   font-size:   1.7rem;
+  min-height:  64px;
 }
 
 header .icon {
@@ -148,6 +150,7 @@ header .icon {
 
 header .name {
   display:     inline-block;
+  float: left;
 }
 
 footer {
