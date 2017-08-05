@@ -23,6 +23,11 @@ body {
   font-size:    1.3rem;
 }
 
+.caps {
+  font-size: 70%;
+
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -100,7 +105,6 @@ section {
 }
 
 .work a:hover {
-  /* border: 1px solid orange; */
   border: 0px;
   padding: 11px;
   z-index: 1;
@@ -109,6 +113,7 @@ section {
 footer {
   font-family:     'Quattrocento Sans', 'Helvetica',sans-serif;
   font-size:       1.2rem;
+  font-variant: small-caps;
   color: gray;
   margin: 16px;
 }
@@ -119,6 +124,7 @@ footer div {
 
 footer span {
   display: block;
+  font-variant: none;
   font-family:  'EB Garamond',serif;
   color: black;
 }
