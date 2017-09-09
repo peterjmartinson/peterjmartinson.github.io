@@ -5,6 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans');
 
+.border {
+  border: 1px solid black;
+}
+
 html {
   font-size:      10px;
   font-family:    'EB Garamond','Times New Roman',serif;
@@ -92,6 +96,12 @@ section {
   max-width: 60rem;
 }
 
+section ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+}
+
 .work {
   text-align: center;
 }
@@ -100,14 +110,23 @@ section {
   position: relative;
   display: inline-block;
   padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   z-index: 0;
 }
 
 .work a:hover {
   border: 0px;
-  padding: 11px;
+  /* padding: 11px; */
   z-index: 1;
+}
+
+.work-links {
+  display: inline;
+  width: 200px;
+}
+
+.work-description {
+  display: inline;
 }
 
 footer {
