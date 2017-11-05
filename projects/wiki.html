@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  <link rel="stylesheet" href="../css/style.css" media="all">
+  <link rel="stylesheet" href="../css/project.css" media="all">
+  <link rel="stylesheet" href="../css/obsidian.css" media="all">
+
+  <title>PJM | Wikipedia Viewer</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html">
+      <div class="name"><span>PETER J. MARTINSON</span></div>
+      <div class="icon"></div>
+    </a>
+  </header>
+
+  <main>
+    <section class="project-splash">
+      <h1>Wikipedia Viewer</h1>
+      <img src="../assets/wikipedia_splash.png" alt="Responsive examples of Wikipedia Viewer page">
+      <div class="tags">
+        <span>#AJAX</span>
+        <span>#HTML</span>
+        <span>#CSS</span>
+      </div>
+    </section>
+    <h2>Description</h2>
+    <section>
+      <p>Wikipedia Viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.  It consists of a search bar and a list of result links that will open Wikipedia entries.</p>
+    </section>
+    <h2>Execution</h2>
+    <section>
+
+      <p>This project used the <a href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank">{Wikipedia API}</a>.  It provides a simple endpoint for random articles, <code><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">https://en.wikipedia.org/wiki/Special:Random</a></code>, so a new browser window is simply opened with this address.  To perform a search, jQuery's <code>$.get()</code> function is used, which returns a JSON object that contains a list of results.  This object is parsed, and turned into an unordered list of links under the search bar.  Clicking on any one opens the link in a new browser window.</p>
+<pre class="prettyprint linenums">
+function listResults(res) {
+  var list = '&lt;ul&gt;';
+  res.query.search.forEach(function(e) {
+    var list_element = '';
+    var link = 'https://en.wikipedia.org/wiki/' + e.title.replace(/\s+/g,'_')
+    list_element += '&lt;li&gt;';
+    list_element += '  &lt;a href="' + link + '" target="_blank"&gt;';
+    list_element += '  &lt;strong&gt;' + e.title + '&lt;/strong&gt;&lt;br&gt;';
+    list_element += '  &lt;em&gt;' + e.snippet + '&lt;/em&gt;';
+    list_element += '  &lt;/a&gt;';
+    list_element += '&lt;/li&gt;';
+    list += list_element;
+  });
+  list += '&lt;/ul&gt;';
+  return list;
+}
+
+dom.search.onclick = function() {
+  var val = dom.search.form.searchy.value.replace(/\s+/g,'%20');
+  var wiki_url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=' + val + '&origin=*';
+  dom.results.innerHTML = 'Searching...';
+  $.get(wiki_url, function(response) {
+    dom.results.innerHTML = listResults(response);
+  });
+}
+</pre>
+      <p>Because I generally don't like the usual HTML link decorations (blue text, underline), I made each of the links a plain blue rectangle that displays an orange highlight at the left edge when under the mouse pointer.</p>
+<pre class="prettyprint linenums">
+section li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-left: 5px solid #0c1c45;
+  background: #0c1c45;
+  color: #bec6da;
+  box-shadow: 2px 2px 3px 0px #0c1c45;
+}
+
+section li a {
+  display: block;
+  color: #bec6da;
+  text-decoration: none;
+}
+
+section li:hover {
+  border-left: 5px solid #FF7600;
+}
+</pre>
+    <p>Besides these internals, the styling is similar to my old portfolio page, but without the massive sidebar at the left.</p>
+    </section>
+    <section class="project-links">
+      <a href="../docs/wikipedia-viewer/index.html" target="_blank">Demo</a>
+      <a href="https://github.com/peterjmartinson/peterjmartinson.github.io/tree/master/docs/wikipedia-viewer" target="_blank">Source</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      COPYRIGHT 2017
+      <span>Peter J. Martinson</span>
+    </div>
+    <div class="contact">
+      CONTACT
+      <span>
+        <a href="mailto:peter.j.martinson@gmail.com">
+          peter.j.martinson@gmail.com
+        </a>
+      </span>
+    </div>
+    <div class="navigation">
+      NAVIGATION
+      <span>
+        <a href="../index.html">Home </a>&#151;
+        <a href="http://stonetelescope.wordpress.com" target="_blank">Stories </a>&#151;
+        <a href="https://twitter.com/StoneTelescope" target="_blank">Twitter</a>
+      </span>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../js/flair.js"></script>
+
+</body>
+</html>
+
