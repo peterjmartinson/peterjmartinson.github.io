@@ -7,6 +7,7 @@
 
 @import "reset";
 @import "variables";
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quattrocento+Sans');
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -19,19 +20,22 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  // font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $mainSerif;
   color: $darkGray;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 38rem;
+  // max-width: 740px;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  // font-family: $helveticaNeue;
+  font-family: $mainSans;
   color: $darkerGray;
   font-weight: bold;
 
@@ -73,7 +77,9 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    box-shadow: 0px 0px 5px 5px $blue;
+    background: $blue;
+    color: $lightGray;
   }
 }
 
@@ -156,7 +162,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $gray;
 
   @include mobile {
     text-align: center;
@@ -194,7 +200,8 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  // font-family: $helveticaNeue;
+  font-family: $mainSans;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -213,7 +220,8 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: $mainSans;
+  // font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
@@ -243,7 +251,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $gray;
 }
 
 .posts > .post:last-child {
