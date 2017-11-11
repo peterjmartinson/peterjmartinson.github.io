@@ -287,9 +287,28 @@ nav {
 }
 
 footer {
-  padding: 20px 0;
-  text-align: center;
+  font-family:     'Quattrocento Sans', 'Helvetica',sans-serif;
+  font-size:       1.2rem;
+  font-variant: small-caps;
+  color: gray;
+  margin: 16px;
 }
+
+footer div {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+footer span {
+  display: block;
+  font-variant: none;
+  font-family:  'EB Garamond',serif;
+  color: black;
+}
+// footer {
+//   padding: 20px 0;
+//   text-align: center;
+// }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
