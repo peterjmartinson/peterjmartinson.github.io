@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Wikipedia Viewer
-excerpt: Wikipedia Viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.
+title: Wikipedia Client
+excerpt: The Wikipedia client allows a user to search for a Wikipedia entry or to get a random Wikipedia page.
 ---
 
 <div class="tags">
@@ -73,6 +73,6 @@ section li:hover {
 Besides these internals, the styling is similar to my old portfolio page, but without the massive sidebar at the left.
 
 <section class="project-links">
-  <a href="../docs/wikipedia-viewer/index.html" target="_blank">Demo</a>
+  <a href="{{ site.baseurl }}/portfolio/wikipedia-viewer/index.html" target="_blank">Demo</a>
   <a href="https://github.com/peterjmartinson/peterjmartinson.github.io/tree/master/docs/wikipedia-viewer" target="_blank">Source</a>
 </section>

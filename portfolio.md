@@ -4,8 +4,8 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-[Pengo](http://peterjmartinson.github.io/projects/pengo.html)  
-[Calculator](http://peterjmartinson.github.io/docs/calculator/index.html)  
-[Portfolio, v1.0](http://peterjmartinson.github.io/docs/portfolio_v1/index.html)  
-[Wikipedia Viewer](http://peterjmartinson.github.io/projects/wiki.html)  
-[TwitchTV Client](http://peterjmartinson.github.io/docs/twitch-client/index.html)  
+[Pengo]({{ site.baseurl }}/Pengo)  
+[Calculator]({{ site.baseurl }}/portfolio/calculator/index.html)  
+[Portfolio, v1.0]({{ site.baseurl }}/portfolio/portfolio_v1/index.html)  
+[Wikipedia Viewer]({{ site.baseurl }}/Wikipedia-Viewer)  
+[TwitchTV Client]({{ site.baseurl }}/portfolio/twitch-client/index.html)  
