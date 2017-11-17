@@ -45,7 +45,7 @@ Total execution time   : 65.440 milliseconds
 
 Not bad, but can we speed this thing up?
 
-First we tried to break it up into a hunt phase and a return phase. In the first phase, `hasSkill(“anguler”)` a JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) is used to check each property for the skill with [{`indexOf`}](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf).  In the second phase, if `hasSkill` found the given term, the property key is returned, otherwise the given term is just returned. The code is below.
+First we tried to break it up into a hunt phase and a return phase. In the first phase, `hasSkill(“anguler”)` a JavaScript array [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) is used to check each property for the skill with [{ `indexOf` }](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf).  In the second phase, if `hasSkill` found the given term, the property key is returned, otherwise the given term is just returned. The code is below.
 
 <script src="https://gist.github.com/peterjmartinson/a95e46c15d19ab893b1faa888e960113.js"></script>
 

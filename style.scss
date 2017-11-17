@@ -315,23 +315,26 @@ nav {
 }
 
 footer {
-  font-family:     'Quattrocento Sans', 'Helvetica',sans-serif;
-  font-size:       1.2rem;
-  font-variant: small-caps;
-  color: gray;
+  font-size:   1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: $mainSans;
   margin: 16px;
+  color: $gray;
+  /* max-width: 60rem; */
 }
 
 footer div {
+  flex-grow: 1;
   display: inline-block;
-  margin-bottom: 16px;
+  text-align: center;
 }
 
 footer span {
   display: block;
-  font-variant: none;
-  font-family:  'EB Garamond',serif;
-  color: black;
+  font-family: $mainSerif;
+  color: $darkGray;
 }
 // footer {
 //   padding: 20px 0;

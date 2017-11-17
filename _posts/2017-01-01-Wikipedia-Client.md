@@ -16,7 +16,7 @@ Wikipedia Viewer allows a user to search for a Wikipedia entry or to get a rando
 
 ## Execution
 
-This project used the [{Wikipedia API}](https://www.mediawiki.org/wiki/API:Main_page).  It provides a simple endpoint for random articles, [{`https://en.wikipedia.org/wiki/Special:Random`}](https://en.wikipedia.org/wiki/Special:Random), so a new browser window is simply opened with this address.  To perform a search, jQuery's `$.get()` function is used, which returns a JSON object that contains a list of results.  This object is parsed, and turned into an unordered list of links under the search bar.  Clicking on any one opens the link in a new browser window.
+This project used the [{ Wikipedia API }](https://www.mediawiki.org/wiki/API:Main_page).  It provides a simple endpoint for random articles, [{ `https://en.wikipedia.org/wiki/Special:Random` }](https://en.wikipedia.org/wiki/Special:Random), so a new browser window is simply opened with this address.  To perform a search, jQuery's `$.get()` function is used, which returns a JSON object that contains a list of results.  This object is parsed, and turned into an unordered list of links under the search bar.  Clicking on any one opens the link in a new browser window.
 
 {% highlight JavaScript %}
 function listResults(res) {
