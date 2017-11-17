@@ -35,7 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   // font-family: $helveticaNeue;
-  font-family: $mainSans;
+  font-family: $mainSerif;
   color: $darkerGray;
   font-weight: bold;
 
@@ -73,7 +73,7 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $darkGray;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
@@ -260,6 +260,7 @@ nav {
 }
 
 .post {
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -287,10 +288,6 @@ nav {
     color: white;
     padding: 4px;
     border-radius: 2px;
-  }
-
-  .entry a {
-    color: black;
   }
 
   .project-links {

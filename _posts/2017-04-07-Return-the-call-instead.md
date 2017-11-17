@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Don't return the call - Callback instead!
+excerpt: Callbacks took me a while to understand, while they are a fundamental part of JavaScript...
 ---
 
 Callbacks took me a while to understand, while they are a fundamental part of JavaScript, and especially Node.js. The concept finally clicked while working on a Slack slash command with the [Chingu Penguins cohort](https://chingu-cohorts.github.io/chingu-directory/), called [Pengo](https://pengo.herokuapp.com). The key take away is that there are two categories of functions - those that use `return`, and those that use callbacks. A function that sends a HTTP request needs a callback, while one that does internal operations can simply use `return`.
