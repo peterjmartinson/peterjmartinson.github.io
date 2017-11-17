@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Wikipedia Client
-excerpt: The Wikipedia client allows a user to search for a Wikipedia entry or to get a random Wikipedia page.
+title: Wikipedia Viewer
+excerpt: The Wikipedia viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.
 ---
 
 <div class="tags">
