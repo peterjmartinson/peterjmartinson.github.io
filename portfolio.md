@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-permalink: pretty
+permalink: /portfolio/
 ---
 
 [Pengo]({{ site.baseurl }}/Pengo)  
