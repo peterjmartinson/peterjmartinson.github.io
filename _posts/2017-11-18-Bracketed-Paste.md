@@ -7,7 +7,7 @@ tags: linux, bash
 
 ## The Problem
 
-You want to clone your GitHub repository to your local machine.  To do so, you go to the GitHub repo, hit the clipboard, switch to your local terminal, type `git clone` and hit `ctrl-V`.  But, strange characters show up around the URL you just pasted.
+You want to clone your GitHub repository to your local machine.  To do so, you go to the GitHub repo, hit the clipboard, switch to your local terminal, type `git clone` and hit `ctrl-shift-v`.  But, strange characters show up around the URL you just pasted.
 
 If you're like me, you suck it up and delete the characters for a few weeks, since you don't clone too often.  Then, you really suck it up and look for a solution.  Googling "get rid of the weird characters that paste into Linux terminal" gets you little succor.
 
