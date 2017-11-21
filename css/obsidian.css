@@ -49,7 +49,7 @@
 {
     color: purple;
 }
-pre.prettyprint
+pre.highlight
 {
     border: 0px solid #888;
 }
@@ -58,7 +58,7 @@ ol.linenums
     margin-top: 0;
     margin-bottom: 0;
 }
-.prettyprint {
+.highlight {
     background: #111;
 }
 li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9

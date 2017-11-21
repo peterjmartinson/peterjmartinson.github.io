@@ -38,3 +38,10 @@ jspm_packages
 
 # Vim files
 *.swp
+
+# Jekyll files
+
+
+# Jekyll files
+.sass-cache
+_site
