@@ -14,7 +14,7 @@ twitch.addStreamer = function(channel, logo, response) {
       now_streaming = {},
       new_list_element;
   list_element += '<li>';
-  if (response == 404) {
+  if (response == 404) { // doesn't exist
     url += channel;
     list_element += '  <div class="logo"><img src="' + logo + '"></div>';
     list_element += '  <div class="streamer">';
@@ -23,7 +23,7 @@ twitch.addStreamer = function(channel, logo, response) {
     list_element += '  </div>'
     new_list_item = $(list_element);
   } else {
-    if (response.stream) {
+    if (response.stream) {  // is currently streaming
     now_streaming = response.stream.game,
     url += channel;
     list_element += '  <a href="' + url + '" target="_blank">';
@@ -34,7 +34,7 @@ twitch.addStreamer = function(channel, logo, response) {
     list_element += '    </div>'
     list_element += '  </a>';
     new_list_item = $(list_element);
-    } else {
+    } else {  // is not currently streaming
       url += channel;
       list_element += '  <a href="' + url + '" target="_blank">';
       list_element += '    <div class="logo"><img src="' + logo + '"></div>';
@@ -99,6 +99,5 @@ twitch.fetchJSON = function(exists, channel, logo, callback) {
 twitch.fetchStreamer('ESL_SC2', twitch.fetchJSON);
 twitch.fetchStreamer('freecodecamp', twitch.fetchJSON);
 twitch.fetchStreamer('cretetion', twitch.fetchJSON);
-twitch.fetchStreamer('brunofin', twitch.fetchJSON);
 twitch.fetchStreamer('comster404', twitch.fetchJSON);
 
