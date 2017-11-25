@@ -2,6 +2,7 @@
 layout: post
 title: How to break a program’s bottleneck - nested loops
 excerpt: <em>bottleneck (noun)</em> — what the wine hits as you are pounding from the bottle.
+tags: [Node.js, MongoDB]
 ---
 
 > bottleneck (noun) — what the wine hits as you are pounding from the bottle.

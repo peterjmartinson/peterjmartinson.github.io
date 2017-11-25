@@ -2,6 +2,7 @@
 layout: post
 title: Wikipedia Viewer
 excerpt: The Wikipedia viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.
+tags: [AJAX, HTML, CSS]
 ---
 
 <div class="tags">

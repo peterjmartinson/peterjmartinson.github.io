@@ -2,7 +2,7 @@
 layout: post
 title: Help! My PASTE is broken in Linux!
 excerpt: Paste STRING instead of 0~STRING1~ at the terminal.
-tags: linux, bash
+tags: [linux, bash]
 ---
 
 ## The Problem
