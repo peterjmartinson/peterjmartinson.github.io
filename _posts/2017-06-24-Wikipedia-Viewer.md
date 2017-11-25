@@ -5,12 +5,6 @@ excerpt: The Wikipedia viewer allows a user to search for a Wikipedia entry or t
 tags: [AJAX, HTML, CSS]
 ---
 
-<div class="tags">
-  <span>#AJAX</span>
-  <span>#HTML</span>
-  <span>#CSS</span>
-</div>
-
 ## Description
 
 Wikipedia Viewer allows a user to search for a Wikipedia entry or to get a random Wikipedia page.  It consists of a search bar and a list of result links that will open Wikipedia entries.
