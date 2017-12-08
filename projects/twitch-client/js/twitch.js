@@ -55,16 +55,18 @@ twitch.addStreamer = function(channel, logo, response) {
  * See if a channel is currently streaming, or even exists
  *   hint: this function calls twitch.addStreamer() !!
  * @params {string} The name of the streamer
- * @params {function} Function that receives the data, usually fetchJSON()
+ * @params {function} Function that receives the data, usually fetchCurrent()
 */
 twitch.fetchStreamer = function(channel, callback) {
-  var url = 'https://wind-bow.glitch.me/twitch-api/users/';
-  var suffix = channel + '?callback=?';
-  $.getJSON(url+suffix, function(data) {
+  var base_url = 'https://wind-bow.glitch.me/twitch-api/users/',
+      suffix = '?callback=?',
+      url = base_url + channel + suffix;
+  $.getJSON(url, function(data) {
 
-    var logo_url = 'https://wind-bow.glitch.me/twitch-api/channels/';
-    var logo_suffix = channel + '?callback=?';
-    $.getJSON(logo_url+logo_suffix, function(logo_data) {
+    var logo_base_url = 'https://wind-bow.glitch.me/twitch-api/channels/',
+        logo_suffix = '?callback=?',
+        logo_url = logo_base_url + channel + logo_suffix;
+    $.getJSON(logo_url, function(logo_data) {
       var logo = logo_data.logo != null ? logo_data.logo : "https://dummyimage.com/64x64/ffd9aa/552f00.png&text=@";
       if ( data.status != '422' && data.status != '404' ) {
         callback(1, channel, logo, twitch.addStreamer);
@@ -84,11 +86,12 @@ twitch.fetchStreamer = function(channel, callback) {
  * @params {string} The link to the streamer's avatar
  * @params {function} Function that receives the data, usually addStreamer()
 */
-twitch.fetchJSON = function(exists, channel, logo, callback) {
-  var url = 'https://wind-bow.glitch.me/twitch-api/streams/';
-  var suffix = channel + '?callback=?';
+twitch.fetchCurrent = function(exists, channel, logo, callback) {
+  var base_url = 'https://wind-bow.glitch.me/twitch-api/streams/',
+      suffix = '?callback=?',
+      url = base_url + channel + suffix;
   if (exists) {
-    $.getJSON(url+suffix, function(data) {
+    $.getJSON(url, function(data) {
       callback(channel, logo, data);
     });
   } else {
@@ -96,8 +99,8 @@ twitch.fetchJSON = function(exists, channel, logo, callback) {
   }
 };
 
-twitch.fetchStreamer('ESL_SC2', twitch.fetchJSON);
-twitch.fetchStreamer('freecodecamp', twitch.fetchJSON);
-twitch.fetchStreamer('cretetion', twitch.fetchJSON);
-twitch.fetchStreamer('comster404', twitch.fetchJSON);
+twitch.fetchStreamer('ESL_SC2', twitch.fetchCurrent);
+twitch.fetchStreamer('freecodecamp', twitch.fetchCurrent);
+twitch.fetchStreamer('cretetion', twitch.fetchCurrent);
+twitch.fetchStreamer('comster404', twitch.fetchCurrent);
 

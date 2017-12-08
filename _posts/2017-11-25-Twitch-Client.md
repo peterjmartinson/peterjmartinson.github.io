@@ -19,4 +19,10 @@ There are AJAX calls to three Twitch endpoints.
 
 2. `https://wind-bow.glitch.me/twitch-api/channels/<channel>?callback=?` - This one is needed to get the user's avatar.
 
-3. `https://wind-bow.glitch.me/twitch-api/streams/<channel>?callback=?` - Needed to get details of what the user's currently streaming.
+3. `https://wind-bow.glitch.me/twitch-api/streams/<channel>?callback=?` - Needed to get details of what the user is currently streaming.
+
+The program initiates the process by calling the `/users/` route with
+
+{% highlight javascript %}
+
+{% endhighlight %}

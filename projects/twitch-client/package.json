@@ -1,0 +1,20 @@
+{
+  "name": "twitch-client",
+  "version": "1.0.0",
+  "description": "See who is streaming on TwitchTV",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jasmine": "^2.8.0",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.2"
+  }
+}
