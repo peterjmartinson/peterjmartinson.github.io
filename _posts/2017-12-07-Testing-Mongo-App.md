@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to test a MongoDB app
-excerpt: Hint: you fake it!
+excerpt: Hint - you fake it!
 tags: [Node.js, MongoDB, MochaJS]
 ---
 
