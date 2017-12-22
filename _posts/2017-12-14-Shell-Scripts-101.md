@@ -117,16 +117,37 @@ arr=( 1 2 3 )
 
 The values of an array are accessed with `${a[index]}`, which is a little bit clunky, but it is how it works.
 
-Bash allows you to access the length of the array with the special symbol `#`.  This can be combined with a `for` loop as follows:
+Bash allows you to access the length of the array with the special symbol `#`.  Actually, `#` will give you the length of any variable, including strings.  To get the length of an array, Bash needs to be told to look at the *entire* array, with the `@` symbol.
+
+These combine with the `for` loop as follows:
 
 {% highlight bash %}
-arr=( 1 2 3 )
-len=${#arr[@]}
+#!/bin/bash
 
-for (( i = 0; i < $len; i++ ));
+arr=( 1 2 3 )
+
+for (( i = 0; i < ${#arr[@]}; i++ ));
 do
   echo ${arr[i]}
 done
 {% endhighlight %}
 
 Note the syntax of the loop.  The loop's block is delimited by `do` and `done`, and you use *double* parentheses around the the loop arguments.
+
+For our blog script, we want to be able to type the name of the script, followed by the title of the blog.  The next step is to handle that title correctly.
+
+### Don't argue
+
+The strings that follow a Bash command are its arguments.  These arguments are passed into the script as an array.  That array is accessed in a slightly different way than other variables.  For example
+
+{% highlight bash %}
+#!/bin/bash
+
+arg1=("$1")
+arg2=("$2")
+
+echo ${arg1}
+echo ${arg2}
+{% endhighlight %}
+
+will echo the first two words following the script's name.
