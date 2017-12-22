@@ -151,3 +151,64 @@ echo ${arg2}
 {% endhighlight %}
 
 will echo the first two words following the script's name.
+
+{% highlight bash %}
+$ ./script.sh woah boy!
+woah
+boy!
+$ 
+{% endhighlight %}
+
+Just like with regular Bash arrays, all elements of the arguments array can be selected with `@`, and the number of arguments with `#`.
+
+The following will echo all arguments supplied by the user:
+
+{% highlight bash %}
+#!/bin/bash
+
+arguments=("$@")
+length=("$#")
+
+for (( i = 0; i < $length; i++ )) ;
+do
+  echo ${arguments[i]}
+done
+{% endhighlight %}
+
+### A Jekyll Post Script
+
+So, let's put all this together
+
+{% highlight bash %}
+#!/bin/bash
+
+arguments=("$@")
+length=("$#")
+
+title=`date +%Y-%m-%d`
+
+for (( i = 0; i < $length; i++ )); do
+  title+=-${arguments[i]}
+done
+  
+echo $'---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n## Introduction' > $title.md
+{% endhighlight %}
+
+Walking through this:  First, grab the arguments array and its length.  Second, initialize a title with today's date.  Third, loop through the arguments array, adding elements to the title.  Last, echo a YAML header into a new file with the cobbled title.
+
+{% highlight bash %}
+$ ./blog.sh Awesome New Post
+$ cat 2017-12-21-Awesome-New-Post.md
+---
+layout: post
+title: 
+excerpt: 
+tags: []
+---
+
+## Introduction
+$
+{% endhighlight %}
+
+Good work!  Now, go write some more scripts.
+
