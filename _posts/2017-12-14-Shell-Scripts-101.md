@@ -115,5 +115,18 @@ Arrays are declared between parentheses without any kind of separators
 arr=( 1 2 3 )
 {% endhighlight %}
 
-The values of an array are accessed with `${a[index]}`, which is a little bit clunky.
+The values of an array are accessed with `${a[index]}`, which is a little bit clunky, but it is how it works.
 
+Bash allows you to access the length of the array with the special symbol `#`.  This can be combined with a `for` loop as follows:
+
+{% highlight bash %}
+arr=( 1 2 3 )
+len=${#arr[@]}
+
+for (( i = 0; i < $len; i++ ));
+do
+  echo ${arr[i]}
+done
+{% endhighlight %}
+
+Note the syntax of the loop.  The loop's block is delimited by `do` and `done`, and you use *double* parentheses around the the loop arguments.
