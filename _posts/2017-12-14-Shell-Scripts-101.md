@@ -7,9 +7,11 @@ tags: [Linux]
 
 ### Introduction
 
-My Jekyll blog on GitHub is pretty new, but it's great.  I've written a few posts on my [{ WordPress blog }](http://stonetelescope.wordpress.com), but using the WordPress editor always felt clunky.  Also, I tend to write in places where I don't have internet access, like the train, so I end up composing in a local editor anyway.  Hence, the Jekyll blog fits me great.
+My Jekyll blog on GitHub is pretty new, but it's great.  I've written a few posts on my [{ WordPress blog }](http://stonetelescope.wordpress.com) before, but using the WordPress editor always felt clunky.  Also, I tend to write in places where I don't have internet access, like the train, so I end up composing in a local editor anyway.  Hence, the Jekyll blog, composed in Markdown with a basic editor, fits me great.
 
-One thing that I felt should be just a *little* smoother, though, was creating the initial blog post file.  They all have the same format, `YYYY-MM-DD-Title.md`, and standard headers - what a great opportunity for automation!  So I decided to write a Linux shell script to create a starter file for each post.
+One thing that I felt should be just a *little* smoother, though, was creating the initial blog post file.  They all have the same format, `YYYY-MM-DD-Title.md`, and standard headers.  This should be something that can be automated.  So I decided to write a Linux shell script to create a starter file for each post.
+
+For you Windows people, a shell script is a little like a batch (.bat) file.  It's essentially a list of commands that need to be run in sequence to make something interesting happen.  Putting it all in a script (or batch file) lets you run all those without typing them in.
 
 The goal of the script is to be able to type something like
 
@@ -82,10 +84,38 @@ So, thus far we have this:
 echo -e '---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n## Introduction' > 2017-01-01-Awesome-New-Post.md
 {% endhighlight %}
 
-Note:  the `\n` sequences are newline characters, and the `-e` makes `echo` read those newlines properly.
+Note:  the `\n` sequences are newline characters, and the `-e` makes `echo` read those newlines correctly.
 
 ### Variables
 
 To make the title dynamic, we need to learn a few things about Bash variables.
 
 Simple variables are simple.  For example, `a=1` sets `a` equal to 1.  You don't need to declare a type or anything special.  However, to use the variable, you must precede it by a dollar sign.  So, `b=$a` will set `b` equal to `a`'s contents.
+
+Let's get fancy and set a variable equal to today's date.  At the command prompt, `$ date +%Y-%m-%d` will print out the date in YYYY-MM-DD format, like 2017-12-01.  See `date --help` for a full list of format options.  In the script, we can write `a=date +%Y-%m-%d` to put today's date into the variable `a`.  Now, any time we want to use that date, we can use `$a` instead.  For example,
+
+`you need to find out how to type the quote inside an inline code block`  
+
+{% highlight bash %}
+#!/bin/bash
+
+title=`date +%Y-%m-%d`
+title+=-Awesome-New-Post
+
+echo -e '---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n## Introduction' > $title.md
+{% endhighlight %}
+
+will produce a new file called 2017-12-01-Awesome-New-Post.md.
+
+Notice the fast one I pulled in the fourth line above.  The `+=` operator appends strings or adds value to an existing variable, just like in other programming languages.
+
+So, we're almost there!  We need to learn about arrays before we finally get to command line arguments.
+
+Arrays are declared between parentheses without any kind of separators
+
+{% highlight bash %}
+arr=( 1 2 3 )
+{% endhighlight %}
+
+The values of an array are accessed with `${a[index]}`, which is a little bit clunky.
+
