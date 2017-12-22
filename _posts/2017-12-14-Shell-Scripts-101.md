@@ -92,9 +92,7 @@ To make the title dynamic, we need to learn a few things about Bash variables.
 
 Simple variables are simple.  For example, `a=1` sets `a` equal to 1.  You don't need to declare a type or anything special.  However, to use the variable, you must precede it by a dollar sign.  So, `b=$a` will set `b` equal to `a`'s contents.
 
-Let's get fancy and set a variable equal to today's date.  At the command prompt, `$ date +%Y-%m-%d` will print out the date in YYYY-MM-DD format, like 2017-12-01.  See `date --help` for a full list of format options.  In the script, we can write `a=date +%Y-%m-%d` to put today's date into the variable `a`.  Now, any time we want to use that date, we can use `$a` instead.  For example,
-
-`you need to find out how to type the quote inside an inline code block`  
+Let's get fancy and set a variable equal to today's date.  At the command prompt, `$ date +%Y-%m-%d` will print out the date in YYYY-MM-DD format, like 2017-12-01.  See `date --help` for a full list of format options.  In the script, we can write ``a=`date +%Y-%m-%d` `` to put today's date into the variable `a`.  Now, any time we want to use that date, we can use `$a` instead.  For example,
 
 {% highlight bash %}
 #!/bin/bash
