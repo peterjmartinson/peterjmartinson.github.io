@@ -30,11 +30,15 @@ tags: []
 ---
 {% endhighlight %}
 
+So, let's get started.
+
 ### Shebang!
 
 I'm using the Bourne Shell, aka Bash, so you may need to tweak some things here if you're using a different shell (like ksh).
 
-All shell scripts are named with the `.sh` suffix and begin with a [{ *shebang* }](WIKIPEDIA).  The shebang is `#!` followed by text.  Though it looks like a comment, the program loader sees this and then runs the interpreter which follows.  In other words, a shell script is a series of shell commands run through the interpreter identified in the shebang.
+All shell scripts are named with the `.sh` suffix and begin with a [{ *shebang* }](http://www.tldp.org/LDP/abs/html/sha-bang.html).  The shebang is `#!` followed by text.  Though it looks like a comment, the program loader sees this and then runs the interpreter which follows.
+
+In other words, a shell script is a series of shell commands run through the interpreter identified in the shebang.
 
 First, find out where your interpeter is:
 
@@ -46,15 +50,19 @@ This should result in something like `/bin/bash`.  Thus, the first line of your 
 
 ### Bash Basics
 
-Before doing anything else, save your file and get thee to the command line.  To run your script, you need to change permissions with `chmod`.  So, just type in
+Before doing anything else, save your file and get thee to the command line.  To run your script, you need to change permissions with [{ `chmod` }](https://www.linux.org/threads/file-permissions-chmod.4124/).  So, just type in
 
 {% highlight bash %}
 $ chmod +x bash.sh
 {% endhighlight %}
 
-When you want to run your script, you type `$ ./script.sh`.  If you don't prefix the program with `./`, then the loader will only look in the directories specified in the $PATH environment variable.  `./` says "look in the current directory".  Yeah, I always wondered about that too.
+After you set your permissions, you run your new script with `$ ./script.sh`.  
 
-Now, open the script in your editor again, and write in a command line command.  For example, you can write
+Why the `./`?  Remember above when you typed `$ which bash`?  The interpreter responded by telling you where the program `bash` is located.  Yes, each command is actually a *program* that lives somewhere special.  When you run a program, the program loader looks for it in one of the directories listed in the $PATH variable.  The trick is, the program loader will look *nowhere else*, even the current directory.  By preceding your new program with `./`, you're telling the program loader to skip $PATH and look in the current directory.
+
+Yeah, I always wondered about that too.
+
+Open the script in your editor again, and write in a command line program.  For example, you can write
 
 {% highlight bash %}
 #!/bin/bash
@@ -62,7 +70,7 @@ Now, open the script in your editor again, and write in a command line command. 
 ls
 {% endhighlight %}
 
-When you run your script with `./script.sh`, you'll get a listing of the current directory's contents.  In general, you can write any command you want in your script.
+Now, when you run your script with `$ ./script.sh`, you'll get a listing of the current directory's contents.  In general, you can write any command you want in your script.
 
 The two commands we'll need for our script are `echo` and `date`.  Go ahead and test them right now.  `echo <string>` will just repeat the `<string>` argument, while `date` will, you guessed it, output the current date.  
 
@@ -74,7 +82,7 @@ $ echo Gripping Content > 2017-01-01-Awesome-New-Post.md
 
 This creates a new file, 2017-01-01-Awesome-New-Post.md, that contains some "Gripping Content".  The greater than sign (`>`) tells the interpreter to take whatever output comes from the previous command, and put it into the file indicated.  If the file doesn't exist, then create it.  If the file does exist, all the contents will be replaced.
 
-You can now put this whole command into your script, and run it that way.  We will replace "Gripping Content" with our header text, but we need to find a way to replace the title with something that generates the date automatically and then concatenates it with the title and the file suffix.
+You can now put this whole command into your script, and run it that way.  Let's do that, but replace "Gripping Content" with the header we want in our file.  
 
 So, thus far we have this:
 
@@ -86,13 +94,15 @@ echo -e '---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n## Introduction
 
 Note:  the `\n` sequences are newline characters, and the `-e` makes `echo` read those newlines correctly.
 
+Good work, but now we need to find a way to replace the title with something that generates the date automatically and then concatenates it with the title and the file suffix.
+
 ### Variables
 
 To make the title dynamic, we need to learn a few things about Bash variables.
 
 Simple variables are simple.  For example, `a=1` sets `a` equal to 1.  You don't need to declare a type or anything special.  However, to use the variable, you must precede it by a dollar sign.  So, `b=$a` will set `b` equal to `a`'s contents.
 
-Let's get fancy and set a variable equal to today's date.  At the command prompt, `$ date +%Y-%m-%d` will print out the date in YYYY-MM-DD format, like 2017-12-01.  See `date --help` for a full list of format options.  In the script, we can write ``a=`date +%Y-%m-%d` `` to put today's date into the variable `a`.  Now, any time we want to use that date, we can use `$a` instead.  For example,
+Let's get fancy and set a variable equal to today's date.  At the command prompt, `$ date +%Y-%m-%d` will print out the date in YYYY-MM-DD format, like 2017-12-01.  In the script, we can't just write `a=date +%Y-%m-%d` because the interpreter will get confused.  To set a variable equal to the output of a program, you need to surround the program with backticks, so ``a=`date +%Y-%m-%d` ``.  Now, any time we want to use that date, we can use `$a` instead.  For example,
 
 {% highlight bash %}
 #!/bin/bash
@@ -191,7 +201,7 @@ for (( i = 0; i < $length; i++ )); do
   title+=-${arguments[i]}
 done
   
-echo $'---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n## Introduction' > $title.md
+echo -e '---\nlayout: post\ntitle: \nexcerpt: \ntags: []\n---\n\n### Introduction' > $title.md
 {% endhighlight %}
 
 Walking through this:  First, grab the arguments array and its length.  Second, initialize a title with today's date.  Third, loop through the arguments array, adding elements to the title.  Last, echo a YAML header into a new file with the cobbled title.
@@ -206,8 +216,8 @@ excerpt:
 tags: []
 ---
 
-## Introduction
-$
+### Introduction
+$ 
 {% endhighlight %}
 
 Good work!  Now, go write some more scripts.
