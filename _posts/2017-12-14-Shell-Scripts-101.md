@@ -125,11 +125,11 @@ Arrays are declared between parentheses without any kind of separators
 arr=( 1 2 3 )
 {% endhighlight %}
 
-The values of an array are accessed with `${a[index]}`, which is a little bit clunky, but it is how it works.
+The values of an array are accessed with `${a[index]}`, which is a little bit clunky, but there it is.
 
 Bash allows you to access the length of the array with the special symbol `#`.  Actually, `#` will give you the length of any variable, including strings.  To get the length of an array, Bash needs to be told to look at the *entire* array, with the `@` symbol.
 
-These combine with the `for` loop as follows:
+These combine with a `for` loop as follows:
 
 {% highlight bash %}
 #!/bin/bash
@@ -144,11 +144,11 @@ done
 
 Note the syntax of the loop.  The loop's block is delimited by `do` and `done`, and you use *double* parentheses around the the loop arguments.
 
-For our blog script, we want to be able to type the name of the script, followed by the title of the blog.  The next step is to handle that title correctly.
+Now we will take all our knowledge of variables and combine that with command line arguments to finish up our blog script.
 
 ### Don't argue
 
-The strings that follow a Bash command are its arguments.  These arguments are passed into the script as an array.  That array is accessed in a slightly different way than other variables.  For example
+The strings that follow a Bash command are its arguments.  These arguments are passed into the script as an array.  That array is accessed in a slightly different way than other variable arrays.  For example
 
 {% highlight bash %}
 #!/bin/bash
@@ -169,7 +169,7 @@ boy!
 $ 
 {% endhighlight %}
 
-Just like with regular Bash arrays, all elements of the arguments array can be selected with `@`, and the number of arguments with `#`.
+Just like with regular Bash arrays, all elements of the argument array can be selected with `@`, and the number of arguments with `#`.
 
 The following will echo all arguments supplied by the user:
 
@@ -220,5 +220,5 @@ tags: []
 $ 
 {% endhighlight %}
 
-Good work!  Now, go write some more scripts.
+Good work!  Now, go write some scripts.
 
