@@ -5,11 +5,17 @@ excerpt: Hint - you fake it!
 tags: [Node.js, MongoDB, MochaJS]
 ---
 
-Unit testing JavaScript apps is my Shangri La, and testing calls to MongoDB my Nemesis.
+Unit testing JavaScript apps is my obsession.  Testing calls to MongoDB, however, is my Spassky, my Moriarty, my Nemesis.
 
-For other projects, I'd experimented with writing unit tests for functions that query MongoDB databases.  Usually, it involved creating [Sinon.js](LINK) spies and stubs, and then cobbling together stringed methods.  I never got it to quite work well, and always caught myself thinking that I may be testing my test here, not the function.
+Let's see if this sounds familiar.  You start building a JavaScript app that uses a MongoDB, and you load up Mongoose, and you get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so it at least looks like I care."  So, you get your Mocha and your Sinon fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
 
-I'm on the final project for MongoDB's course "M101JS - MongoDB for Node Developers", and figured out how to write a real unit test, without using Sinon.  Here it is.
+OK, perhaps you have never had this experience, but I have.  And, I just figured out how to do it right.
+
+### The Philosophy
+
+When you make a call to your database, you use a combination of JavaScript and whatever language is used by the database.  If you're sane, you test your database queries in whatever shell your database gives you.  Once your queries are tuned, then you hard-code them into your app.
+
+
 
 ## The Function
 
