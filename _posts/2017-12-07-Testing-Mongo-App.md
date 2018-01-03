@@ -7,13 +7,13 @@ tags: [Node.js, MongoDB, MochaJS]
 
 Unit testing JavaScript apps is my obsession.  Testing calls to MongoDB, however, is my Spassky, my Moriarty, my Nemesis.
 
-Let's see if this sounds familiar.  You start building a JavaScript app that uses a MongoDB, and you load up Mongoose, and you get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so it at least looks like I care."  So, you get your Mocha and your Sinon fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
+Let's see if this sounds familiar.  You start building a JavaScript app that uses a [{ MongoDB }](LINK), and you load up [{ Mongoose }](LINK), and you get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so it at least looks like I care."  So, you get your [{ Mocha }](LINK) and your [{ Sinon }](LINK) fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
 
 OK, perhaps you have never had this experience, but I have.  And, I just figured out how to do it right.
 
 ### The Philosophy
 
-Michael Feathers wrote a great book everybody should read: "Working Effectively with Legacy Code".  He treats legacy code not just as old code you need to modify, but any code that isn't covered by tests.  Before you start whacking away at an existing code base, you need to get everything under test conditions so you know you're not blowing anything up with your changes.
+Michael Feathers wrote a great book everybody should read: [{ "Working Effectively with Legacy Code" }](LINK).  He treats legacy code not just as old code you need to modify, but any code that isn't covered by tests.  Before you start whacking away at an existing code base, you need to get everything under test conditions so you know you're not blowing anything up with your changes.
 
 But, as in the above example, even simple code is sometimes very challenging to test.
 
