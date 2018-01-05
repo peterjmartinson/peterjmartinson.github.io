@@ -31,3 +31,26 @@ To test that your queries get the right data out of the database, you open your 
 
 ## The Function
 
+The function we will test simply inserts a date and some text to the database using a POST request.  Instead of using Mongoose, we'll use the [{ MongoDB driver for Node }](LINK), because I like working close to the metal.
+
+Out of the box, the function will look like this:
+
+{% highlight JavaScript %}
+function postTodo(req, res, db, callback) {
+
+  let new_document = {
+    created_date : new Date(),
+    todo_text : req.body.todo
+  }
+
+  db.collection("todos")
+    .insertOne(new_document, function(err, result) {
+    callback(err, result);
+  });
+
+}
+
+module.exports = {
+  postTodo
+}
+{% endhighlight %}
