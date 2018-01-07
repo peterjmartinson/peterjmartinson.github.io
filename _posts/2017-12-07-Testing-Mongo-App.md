@@ -43,10 +43,7 @@ function postTodo(req, res, db, callback) {
     todo_text : req.body.todo
   }
 
-  db.collection("todos")
-    .insertOne(new_document, function(err, result) {
-    callback(err, result);
-  });
+  db.collection("todos").insertOne(new_document);
 
 }
 
