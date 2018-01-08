@@ -36,18 +36,39 @@ The function we will test simply inserts a date and some text to the database us
 Out of the box, the function will look like this:
 
 {% highlight JavaScript %}
-function postTodo(req, res, db, callback) {
+(function() {
+  'use strict';
 
-  let new_document = {
-    created_date : new Date(),
-    todo_text : req.body.todo
+  function postTodo(req, res, db) {
+
+    let new_document = {
+      created_date : new Date(),
+      todo_text : req.body.todo
+    }
+
+    db.collection("todos").insertOne(new_document);
+
+    return true;
+
   }
 
-  db.collection("todos").insertOne(new_document);
+  module.exports = {
+    postTodo
+  }
 
-}
-
-module.exports = {
-  postTodo
-}
+}());
 {% endhighlight %}
+
+This function doesn't do much.  It creates a new document from the [{ Express }](LINK) (or whatever) request body, and inserts it into the collection.  In a real application, you probably would return some more information, or throw in a callback, but this is stripped down so the testing can be made clear.
+
+What would we like to test?  Should we test that the document was properly inserted into the collection? *NO*!  To test that, either open a database shell and manually check, or create an *acceptance* test.  Unit tests are designed to check the logic of your function, no more than that.
+
+That said, we can test whether the `.insertOne` method was run, and whether the `new_document` passed into it contains a date and whatever text was included in `req.body.todo`.
+
+According to Feathers, the right strategy here is to find a place where the function can be modified without changing anything inside of it.  In other words, some place where the function calls some reference external to it.  In our case, that's the `.insertOne` method.
+
+### The Test
+
+We will create a fake `.insertOne` method that will replace the MongoDB driver's own `.insertOne` method when tests are run.  
+
+
