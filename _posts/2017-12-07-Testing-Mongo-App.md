@@ -69,6 +69,67 @@ According to Feathers, the right strategy here is to find a place where the func
 
 ### The Test
 
-We will create a fake `.insertOne` method that will replace the MongoDB driver's own `.insertOne` method when tests are run.  
+We will create a fake `.insertOne` method that will replace the MongoDB driver's own `.insertOne` method, but only when tests are run.  
 
+In order to create a fake method, you first need to create the whole fake object that has it.  In this case, `.insertOne` is a method on the `db.collection` object, itself a method on the `db` object.  We need to fake all that.
 
+{% highlight JavaScript %}
+    let test_date, test_data,
+        ran = false,
+        test_note = "test note",
+        req = { body: { thenote: test_note } },
+        res = {},
+        db = {};
+
+    function insertOne(ops) {
+      test_date = ops.created_date;
+      test_data = ops.note_text;
+      ran = true;
+      return ops;
+    }
+
+    db.collection = function(name) {
+      return {
+        insertOne: insertOne
+      }
+    }
+{% endhighlight %}
+
+This has three parts:  the `db` object, the fake `.insertOne` function, and the variables used by the test.
+
+The `db` object is declared at the top, and its method `.collection` declared below.  `db.collection()` takes an argument (the name of the collection).  This argument must be included in the function signature, but we don't need to do anything with it.  All the faked version of this method does is return an object that contains our target test method, `insertOne`.
+
+The function `insertOne` has an argument that is in the form of an object with two properties, `created_date` and `note_text`.  Both of these are declared and defined by the function being tested, `postTodo`.  If you look back at the original function definition, you'll see that `created_date` is simply a new date, but `note_text` is part of the request object `req`.  This request object also needs to be faked, as seen in the variables declared at the top of the test.
+
+`insertOne` pumps the two properties of its argument into test variables, flags another variable to indicate the function ran, and then returns the argument.
+
+Now, let's look at the tests themselves.
+
+{% highlight JavaScript %}
+    it('should exist', function() {
+      assert.equal(typeof noteCtrl.postNote, 'function');
+    });
+    
+    it('should run the query', function() {
+      noteCtrl.postNote(req, res, db);
+      assert.equal(ran, true);
+    });
+
+    it('should create a date', function() {
+      noteCtrl.postNote(req, res, db);
+      assert(test_date instanceof Date);
+    });
+
+    it('should post data', function() {
+      noteCtrl.postNote(req, res, db);
+      assert.equal(test_data, test_note);
+    });
+{% endhighlight %}
+
+The first test is fundamental, and just makes sure we didn't delete the function.
+
+The second test checks the `run` flag, to make sure it was flipped to *true*.
+
+The third checks that a JavaScript `Date` object was passed into the `insertOne` method correctly.
+
+The fourth checks that the correct text was sent into `insertOne`.
