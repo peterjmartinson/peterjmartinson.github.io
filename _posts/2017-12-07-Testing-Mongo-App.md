@@ -7,21 +7,21 @@ tags: [Node.js, MongoDB, MochaJS]
 
 Unit testing JavaScript apps is my obsession.  Testing calls to MongoDB, however, is my Spassky, my Moriarty, my Nemesis.
 
-Let's see if this sounds familiar.  You start building a JavaScript app that uses a [{ MongoDB }](LINK), and you load up [{ Mongoose }](LINK), and you get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so it at least looks like I care."  So, you get your [{ Mocha }](LINK) and your [{ Sinon }](LINK) fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
+Let's see if this sounds familiar.  You start building a JavaScript app that uses a [{ MongoDB }](LINK) database, load up [{ Mongoose }](LINK), get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so it at least looks like I care."  So, you get your [{ Mocha }](LINK) and your [{ Sinon }](LINK) fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
 
-OK, perhaps you have never had this experience, but I have.  And, I just figured out how to do it right.
+OK, perhaps you have never had this experience, but I have.  It has been my main stumbling block to going full [{ TDD }](LINK), and a big impediment to my progress.  But, I finally figured out how to create appropriate, even elegant, tests.  Here, I'll show you how to do it too.
 
 ### The Philosophy
 
 Michael Feathers wrote a great book everybody should read: [{ "Working Effectively with Legacy Code" }](LINK).  He treats legacy code not just as old code you need to modify, but any code that isn't covered by tests.  Before you start whacking away at an existing code base, you need to get everything under test conditions so you know you're not blowing anything up with your changes.
 
-But, as in the above example, even simple code is sometimes very challenging to test.
+However, even simple code can be challenging to test.
 
 In his book, Feathers describes what he calls a *seam*.  He defines the seam as "a place where you can change the behavior of a program without changing the surrounding code".  It's a place in the program where something calls *out* to some other place in the code base.  If you can replace that seam's target with a fake target, then you can hang a test on that fake target.  The initial task of the programmer is to find those seams, and then construct test fakes.
 
-When you make a call to the database, the code you use is an API form of the database's access language.  What exact code you use depends on which package you're using to make the calls.  In the above example, we use [{ Mongoose }](LINK).  If you're hitting a relational database, you may use something like [{ Sequelize }](LINK).
+When you make a call to the database, the code you use is an API form of the database's access language.  What exact code you use depends on which package you're using to make the calls.  In the above example, we use [{ Mongoose }](LINK), whose syntax is quite similar to that used in the raw MongoDB shell.  If you're hitting a relational database, you may use something like [{ Sequelize }](LINK).
 
-Mongoose's `.findOne` method is a seam.  When run, the program looks in the Mongoose modules for the function definition, and then runs the corresponding instructions against the database.  To use this as a seam, you redirect your program to a different function with the same name, that you wrote, that can then be used for testing purposes.
+Mongoose's `.findOne` method is a seam.  When run, the program looks in Mongoose's modules for the function definition, and then runs the corresponding instructions against the database.  To use this as a seam, you redirect your program to a different function with the same name, that you wrote, that can then be used for testing purposes.
 
 When I initially tried to write these tests, it was a steep learning curve to figure out how to produce those test fakes.  99% of the tutorials I found started by installing Sinon, and then proceeded to sling stubs and spies around.
 
