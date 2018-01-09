@@ -126,10 +126,6 @@ Now, let's look at the tests themselves.
     });
 {% endhighlight %}
 
-The first test is fundamental, and just makes sure we didn't delete the function.
+The first test is fundamental, and just makes sure we didn't delete the function.  The second test checks the `run` flag, to make sure it was flipped to *true*.  The third checks that a JavaScript `Date` object was passed into the `insertOne` method correctly.  The fourth checks that the correct text was sent into `insertOne`.
 
-The second test checks the `run` flag, to make sure it was flipped to *true*.
-
-The third checks that a JavaScript `Date` object was passed into the `insertOne` method correctly.
-
-The fourth checks that the correct text was sent into `insertOne`.
+Each of the tests look at values that were set by the faked function.  
