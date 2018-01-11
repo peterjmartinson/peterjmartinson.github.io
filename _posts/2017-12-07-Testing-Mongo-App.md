@@ -9,17 +9,17 @@ Unit testing JavaScript apps is my obsession.  Testing calls to MongoDB, however
 
 Let's see if this sounds familiar.  You start building a JavaScript app that uses a [{&nbsp;MongoDB&nbsp;}](https://www.npmjs.com/package/mongodb) database, load up [{&nbsp;Mongoose&nbsp;}](https://www.npmjs.com/package/mongoose), get all your routes calling the database, and it's all working just great.  A few days later, you think, "I should probably write some unit tests for this, so at least it looks like I care."  So, you get your [{&nbsp;Mocha&nbsp;}](https://mochajs.org/) and your [{&nbsp;Sinon&nbsp;}](http://sinonjs.org/) fired up, and a month later you're still trying to figure out how to write your first test of a Mongoose `.findOne` call.
 
-OK, perhaps you have never had this experience, but I have.  It has been my main stumbling block to going full [{&nbsp;TDD&nbsp;}](LINK), and a big impediment to my progress.  But, I finally figured out how to create appropriate, even elegant, tests.  Here, I'll show you how to do it too.
+OK, perhaps you have never had this experience, but I have.  It has been my main stumbling block to going full [{&nbsp;TDD&nbsp;}](http://www.agiledata.org/essays/tdd.html), and a big impediment to my progress.  But, I finally figured out how to create appropriate, even elegant, tests.  Here, I'll show you how to do it too.
 
 ### The Philosophy
 
-Michael Feathers wrote a great book everybody should read: [{&nbsp;"Working Effectively with Legacy Code"&nbsp;}](LINK).  He treats legacy code not just as old code you need to modify, but any code that isn't covered by tests.  Before you start whacking away at an existing code base, you need to get everything under test conditions so you know you're not blowing anything up with your changes.
+Michael Feathers wrote a great book everybody should read: [{&nbsp;"Working Effectively with Legacy Code"&nbsp;}](https://softwareengineering.stackexchange.com/questions/122014/what-are-the-key-points-of-working-effectively-with-legacy-code).  He treats legacy code not just as old code you need to modify, but any code that isn't covered by tests.  Before you start whacking away at an existing code base, you need to get everything under test conditions so you know you're not blowing anything up with your changes.
 
 However, even simple code can be challenging to test.
 
 In his book, Feathers describes what he calls a *seam*.  He defines the seam as "a place where you can change the behavior of a program without changing the surrounding code".  It's a place in the program where something calls *out* to some other place in the code base.  If you can replace that seam's target with a fake target, then you can hang a test on that fake target.  The initial task of the programmer is to find those seams, and then construct test fakes.
 
-When you make a call to the database, the code you use is an API form of the database's access language.  What exact code you use depends on which package you're using to make the calls.  In the above example, we use [{&nbsp;Mongoose&nbsp;}](LINK), whose syntax is quite similar to that used in the raw MongoDB shell.  If you're hitting a relational database, you may use something like [{&nbsp;Sequelize&nbsp;}](LINK).
+When you make a call to the database, the code you use is an API form of the database's access language.  What exact code you use depends on which package you're using to make the calls.  In the above example, we use [{&nbsp;Mongoose&nbsp;}](https://www.npmjs.com/package/mongoose), whose syntax is quite similar to that used in the raw MongoDB shell.  If you're hitting a relational database, you may use something like [{&nbsp;Sequelize&nbsp;}](http://docs.sequelizejs.com/).
 
 Mongoose's `.findOne` method is a seam.  When run, the program looks in Mongoose's modules for the function definition, and then runs the corresponding instructions against the database.  To use this as a seam, you redirect your program to a function you created with the same name which can then be used for testing purposes.
 
@@ -31,7 +31,7 @@ To test that your queries get the right data out of the database, you open your 
 
 ## The Function
 
-The function we will test simply inserts a date and some text to the database using a POST request.  Instead of using Mongoose, we'll use the [{&nbsp;MongoDB driver for Node&nbsp;}](LINK), because I like working close to the metal.  This example can easily be adapted to use Mongoose.
+The function we will test simply inserts a date and some text to the database using a POST request.  Instead of using Mongoose, we'll use the [{&nbsp;MongoDB driver for Node&nbsp;}](https://www.npmjs.com/package/mongodb), because I like working close to the metal.  This example can easily be adapted to use Mongoose.
 
 Out of the box, the function will look like this:
 
@@ -50,7 +50,7 @@ module.exports = {
 }
 {% endhighlight %}
 
-This function doesn't do much.  It creates a new document from the [{&nbsp;Express&nbsp;}](LINK) (or whatever) request body, and inserts it into the collection.  In a real application, you probably would return some more information, or throw in a callback, but this is stripped down so the testing can be made clear.
+This function doesn't do much.  It creates a new document from the [{&nbsp;Express&nbsp;}](https://expressjs.com/) (or whatever) request body, and inserts it into the collection.  In a real application, you probably would return some more information, or throw in a callback, but this is stripped down so the testing can be made clear.
 
 What would we like to test?  Should we test that the document was properly inserted into the collection? *NO*!  To test that, either open a database shell and manually check, or create an *acceptance* test.  Unit tests are designed to check the logic of your function and no more.
 
