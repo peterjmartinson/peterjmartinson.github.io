@@ -21,4 +21,6 @@ Sometimes, those cosmic rays hit other atoms.  When they do, the effects can ran
 
 On the other side of our full moon, the sun has been going through its own changes.  It is now near solar minimum, when sunspots are all but gone and its magnetic field has weakened.  Seven years ago, the sun was near solar maximum, with lots of spots and strong magnetic field.  But it was a strange maximum.
 
-It was so strange, three different groups of heliophyscisists came together in [an announcement](LINK) that it may be the last solar maximum we see for a generation.  
+It was so strange, three different groups of heliophyscisists came together in [an announcement](LINK) that it may be the last solar maximum we see for a generation.  I reviewed the analysis in [this](LINK) and other videos at the time.
+
+In short, three different sets of solar observations - [coronal](LINK), [helioseismic](LINK), and magnetic - 
