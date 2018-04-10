@@ -23,4 +23,4 @@ On the other side of our full moon, the sun has been going through its own chang
 
 It was so strange, three different groups of heliophyscisists came together in [an announcement](LINK) that it may be the last solar maximum we see for a generation.  I reviewed the analysis in [this](LINK) and other videos at the time.
 
-In short, three different sets of solar observations - [coronal](LINK), [helioseismic](LINK), and magnetic - 
+In short, three different sets of solar observations - [coronal](LINK), [helioseismic](LINK), and [magnetic](LINK).  All three, in their own way, indicate that the next solar cycle will be either late or weak, or even nonexistent.
