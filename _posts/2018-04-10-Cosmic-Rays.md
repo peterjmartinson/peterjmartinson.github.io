@@ -27,7 +27,11 @@ An instrument was placed on the Lunar Reconaissance Orbiter (LRO), designed to s
 
 In late 2013 through 2014, a series of articles came out detailing the initial findings.  One of these papers, [Does the worsening galactic cosmic radiation environment observed by CRaTER preclude future manned deep space exploration?](LINK), by Schwadron et al., definitively warned that it was looking pretty bad for the astronauts.
 
-They combined cosmic ray measurements made by CRaTER with those made by the [Advanced Composition Explorer (ACE)](LINK) to build a picture of the environment going back to about the year 2000.  They then used a model to relate the galactic cosmic ray (GCR) flux to strength of the solar cycle, as indicated by sunspot number.  Combining these two sets of data (observation and model), they then make a forecast about the GCR flux for the coming solar minimum.
+They combined cosmic ray measurements made by CRaTER with those made by the [Advanced Composition Explorer (ACE)](LINK) to build a picture of the environment going back to about the year 2000.  They then used a model to relate the galactic cosmic ray (GCR) flux to strength of the solar cycle, as indicated by sunspot number.  Combining these two sets of data (observation and model), they then were able to make a forecast about the GCR flux for the coming solar minimum, depending on just which minimum we end up with (more on this below).
+
+They noted that, based on GCR flux measured by ACE during the previous solar minimum (~2009), male astronauts would reach their recommended limit of GCR exposure within 400 days, and female astronauts would reach theirs within 300.  Based on forecasts of the next solar minimum (~2019), exposure times would decrease by about 20%:  about 320 days for male astronauts, and about 240 days for female.  Given about six months to travel from Earth to Mars, and then six months back, a crew would easily exceed their GCR dose rates and enter dangerous territory.
+
+In the latest paper, [Update on the worsening particle radiation environment observed by CRaTER and implications for future human deep-space exploration](LINK), Schwadron et al. revisit this prediction, since we're almost in the middle of solar minimum.  Their conclusion?  The 2014 overestimated the friskiness of our sun by about 10%.  In other words, astronauts will be able to spend even less time than expected in deep space.
 
 
 
