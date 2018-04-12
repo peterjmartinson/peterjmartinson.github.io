@@ -51,7 +51,15 @@ Why was their prediction so far off?
 
 "1) the magnetic fields in the solar system are weakening more rapidly than we anticipated.  This has the effect of allowing more radiation into the solar system."
 
-Readers of this blog may know that I've been hot on this topic since about 2011, when I produced a video about the Grand Solar Minimum...
+Readers of this blog may know that I've been hot on this topic since about 2011.  Back then, I [filmed](LINK) a pedagogical video on the prediction, by three sets of researchers, that the sun was going into a severe quiet period.  I followed that video with a [few](link) [additional](link) [pieces](link) to expand on the concept.
+
+Every 11 years or so, the sun goes through a cycle.  This cycle is observed through increasing and decreasing numbers of sunspots, magnetic field strength, and other forms of solar emanations.  Humans have observed this cycle since about the 1600s, and these observations form one of the longer records of continuous human measurement.  Right now, in mid-2018, we're at the tail end of Cycle 24.  Solar minimum is predicted to hit around 2020.  
+
+The flux of GCRs follows this cycle.  During solar maximum, the GCR flux is low.  During minimum, it's high.  When the charged GCR entities pass through the Sun's farflung magnetic field, they experience a torque.  The net effect of this torque is that the GCRs don't make it very deep into the solar system before getting redirected back out again.  When the solar magnetic field is strong, during solar maximum, only a few, very high speed GCRs make it to the Earth.  When the field is weak, during solar minimum, more GCRs can get to us, including lower energy ones.  
+
+The Sun's magnetic field, also called the Intergalactic Magnetic Field (IMF), is our barrier against this onslaught of the galaxies.  If the prediction is right, and our sun is headed for a prolonged Grand Solar Minimum, then we are dead meat...
+
+
 
 
 
