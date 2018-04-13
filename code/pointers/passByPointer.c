@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void changeByValue(int n);
+void changeByPointer(int *p);
 
 int main(void)
 {
@@ -9,13 +9,13 @@ int main(void)
   value = 6;
 
   printf("Add 1 to %d:\n", value);
-  changeByValue(value);
+  changeByPointer(&value);
   printf("Result: %d\n", value);
-  
+
 }
 
-void changeByValue(int n)
+void changeByPointer(int *p)
 {
-  n++;
+  (*p)++;
 }
 
