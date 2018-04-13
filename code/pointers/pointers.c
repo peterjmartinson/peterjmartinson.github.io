@@ -7,6 +7,7 @@
 void changeByValue(int n);
 void changeByPointer(int *p);
 void incrementArray(int *a, int length);
+int * passArray(int n);
 
 int main(void)
 {
@@ -16,6 +17,7 @@ int main(void)
   int i;
   int *p1;
   int *p2;
+  int *p3;
   int SIZE = 10;
   int arr[SIZE];
 
@@ -51,6 +53,14 @@ int main(void)
   }
   printf("\n");
 
+  p3 = passArray(27);
+  printf("Array passed back from function:\n");
+  for (i = 0; i < 27; i++) {
+    printf("%d ", *(p3+i));
+  }
+  printf("\n");
+  // Doesn't work!!!
+
 }
 
 void changeByValue(int n)
@@ -84,6 +94,21 @@ void incrementArray(int *a, int length)
   }
   printf("\n");
   
+}
+
+int * passArray(int n)
+{
+  int arr[n];
+  int i;
+  int *x;
+
+  for (i = 0; i < n; i++) {
+    arr[i] = i;
+  }
+
+  x = &arr[0];
+
+  return x;
 }
 
 
