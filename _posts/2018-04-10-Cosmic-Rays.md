@@ -33,29 +33,46 @@ In the latest paper, [Update on the worsening particle radiation environment obs
 
 Why was their prediction so far off?
 
-> That’s a very good and a very hard question. I am not sure why the dose rates
-> are going up so quickly. I suspect two issues:
+### What's up with the Sun?
 
-> 1) the magnetic fields in the solar system are weakening more rapidly than we
-> anticipated. This has the effect of allowing more radiation into the solar
-> system (galactic cosmic rays come from outside the solar system)
+"That's a very good and a very hard question," said Nathan Schwadron, principal investigator for the CRaTER experiment.  "I am not sure why the dose rates are going up so quickly.  [But] I suspect two issues:
 
-> 2) the drift of cosmic rays has changed dramatically due to a recent reversal
-> in the dominant polarity of the magnetic field within the solar system. This
-> is a natural solar cycle effect, but may be accentuated due to the weak
-> strength in the magnetic field. 
+"1) The magnetic fields in the solar system are weakening more rapidly than we anticipated.  This has the effect of allowing more radiation into the solar system.
 
-## What's up with the Sun?
-
-"That's a very good and a very hard question," said Nathan Schwadron, principal investigator for the CRaTER experiment.  "I am not sure why the dose rates are going up so quickly.  [But] I suspect two issues:"
-
-"1) the magnetic fields in the solar system are weakening more rapidly than we anticipated.  This has the effect of allowing more radiation into the solar system."
-
-Readers of this blog may know that I've been hot on this topic since about 2011.  Back then, I [filmed](LINK) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a [few](link) [additional](link) [pieces](link) to expand on the concept.
+"2) The drift of cosmic rays has changed dramatically due to a recent reversal in the dominant polarity of the magnetic field within the solar system. This is a natural solar cycle effect, but may be accentuated due to the weak strength in the magnetic field."
 
 Every 11 years or so, the sun goes through a cycle.  This cycle is observed through increasing and decreasing numbers of sunspots, magnetic field strength, and other forms of solar emanations.  Humans have observed this cycle since about the 1600s, and these observations form one of the longer records of continuous human measurement.  Right now, in mid-2018, we're at the tail end of Cycle 24.  Solar minimum is predicted to hit around 2020.  
 
-The flux of GCRs follows this cycle.  During solar maximum, the GCR flux is low.  During minimum, it's high.  When the charged GCR entities pass through the Sun's farflung magnetic field, they experience a torque.  The net effect of this torque is that the GCRs don't make it very deep into the solar system before getting redirected back out again.  When the solar magnetic field is strong, during solar maximum, only a few, very high speed GCRs make it to the Earth.  When the field is weak, during solar minimum, more GCRs can get to us, including lower energy ones.  
+The flux of GCRs follows this cycle.  During solar maximum, the GCR flux is low.  During minimum, it's high.  When the charged GCRs pass through the Sun's farflung magnetic field, they experience a torque.  The net effect of this torque is that the GCRs don't make it very deep into the solar system before getting redirected back out again.  When the solar magnetic field is strong, during solar maximum, only a few, very high speed GCRs make it to the Earth.  When the field is weak, during solar minimum, more GCRs can get to us, including lower energy ones.  
+
+At this point, it may appear that an increasing GCR flux is just a normal result of the approach to solar minimum, though this minimum may be some kind of super-minimum, and it's approaching super fast.  However, that is not the only story about the sun.
+
+### What's down with the sun?
+
+Back in 2011, the sun was nearing the top of its cycle, solar maximum.  At that time, I [filmed](LINK) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a [few](link) [additional](link) [pieces](link) to expand on the concept.
+
+First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots.  It is well known that, in the viscinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](link).  This splitting can be used to estimate the strength of the magnetic field.  Livingston et al. showed that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 Gauss - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
+
+A second group studies sound waves on the sun.  Ripples of gas on the sun, observed as a wiggling doppler effect on spectral lines, can be analyzed to reveal processes deep within the sun's interior.  A periodic feature the GONG group has identified using these helioseismic studies is the Torsional Oscillation.  This is a specific latitude band of gas inside the sun that rings with its own frequency.  As the solar cycle progresses, this band starts near the equator and moves toward the pole.  The GONG group showed that the strength of this band can be a predictor of the strength of the next solar cycle.  They showed that the torsional oscillation in mid-2011 was extremely weak, indicating an extremely week Cycle 25.
+
+The third indication came from observations of triply ionized iron spectra within the solar corona.  I did an [interview with Dr. Altrock](link) back in 2011 on his observations, but here is the summary.  Triply ionized iron follows the sun's magnetic field.  As the cycle progresses, this feature also moves from the northern latitudes up to the pole.  The speed and strength of this "Rush to the Poles" indicates the strength of the next solar cycle.  Again, a very weak rush indicated a potentially very weak Cycle 25.
+
+If these scientists were correct, then the sun may be headed for a Grand Solar Minimum, something we have not witnessed since the late 17th Century.  Since an understanding of solar physics is still in its infancy, we do need to wait another couple of years to see if the prediction is right.
+
+But, I would suggest the observations of Schwadron et al. are a fourth component that supports, maybe not a complete Grand Solar Minimum, but at least a very enigmatic time in our relationship with the sun.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 The Sun's magnetic field, also called the Intergalactic Magnetic Field (IMF), is our barrier against this onslaught of the galaxies.  If the prediction is right, and our sun is headed for a prolonged Grand Solar Minimum, then we are dead meat...
 
