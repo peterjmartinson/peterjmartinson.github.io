@@ -61,11 +61,14 @@ If these scientists were correct, then the sun may be headed for a Grand Solar M
 
 One effect of another grand solar minimum would be a prolonged increase in galactic cosmic ray flux into the inner reaches of the solar system.  This is the signal that initially drew me to Schwadron et al.'s results.
 
+While a higher GCR flux is bad news for astronauts, wouldn't that be offset by less solar activity?  In other words, if the sun goes quiet, there should be a lower flux of solar energetic particles.  However, that is not the case.
+
+
 ### A quiet sun?
 
-A quiet sun doesn't mean a friendly sun, though.  During a prolonged quiet period back in the mid 1800s, the sun cracked out an incredibly intense X-ray flare, which had an associated coronal mass ejection.  This Carrington Event caused fantastic electrical effects within the Earth's [nascent electric grids](link).
+A quiet sun doesn't mean a friendly sun.  During a somewhat deep solar minimum back in the mid 1800s, the sun cracked out an incredibly intense X-ray flare, which had an associated coronal mass ejection.  This Carrington Event caused fantastic electrical effects within the Earth's [nascent electric grids](link).  If such an event occurred today, it could cause blackouts on the scale of massive natural disasters, potentially worldwide.
 
-A similar event occurred last September 2017, when the sun belched forth the largest X-ray flare in over a decade.  Schwadron et al. (2018) also spend time examining the effects of this event, which thankfully was not aimed at the Earth.  They concluded that ...
+Back in September 2017, the sun belched forth the largest X-ray flare in over a decade.  If this flare had been aimed at the Earth, it might have caused a modern Carrington Event.  Schwadron et al. (2018) spend time examining the effects of this event on the CRaTER instrument.  They concluded that ...
 
 So, during what may be an approaching grand minimum, astronauts may face a dual threat - both from the galaxies as well as from an unstable star.
 
