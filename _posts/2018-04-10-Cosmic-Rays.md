@@ -51,15 +51,29 @@ At this point, it may appear that an increasing GCR flux is just a normal result
 
 Back in 2011, the sun was nearing the top of its cycle, solar maximum.  At that time, I [filmed](LINK) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a [few](link) [additional](link) [pieces](link) to expand on the concept.
 
-First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots.  It is well known that, in the viscinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](link).  This splitting can be used to estimate the strength of the magnetic field.  Livingston et al. showed that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 Gauss - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
+First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots [[[footnote: The astronomers made these observations at the McMath-Pierce solar telescope, which bears an uncanny resemblance to the pyramids at Giza.  This telescope was just recently defunded and shut down.]]].  It is well known that, in the viscinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](link).  This splitting can be used to estimate the strength of the magnetic field.  Livingston et al. showed that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 Gauss - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
 
 A second group studies sound waves on the sun.  Ripples of gas on the sun, observed as a wiggling doppler effect on spectral lines, can be analyzed to reveal processes deep within the sun's interior.  A periodic feature the GONG group has identified using these helioseismic studies is the Torsional Oscillation.  This is a specific latitude band of gas inside the sun that rings with its own frequency.  As the solar cycle progresses, this band starts near the equator and moves toward the pole.  The GONG group showed that the strength of this band can be a predictor of the strength of the next solar cycle.  They showed that the torsional oscillation in mid-2011 was extremely weak, indicating an extremely week Cycle 25.
 
 The third indication came from observations of triply ionized iron spectra within the solar corona.  I did an [interview with Dr. Altrock](link) back in 2011 on his observations, but here is the summary.  Triply ionized iron follows the sun's magnetic field.  As the cycle progresses, this feature also moves from the northern latitudes up to the pole.  The speed and strength of this "Rush to the Poles" indicates the strength of the next solar cycle.  Again, a very weak rush indicated a potentially very weak Cycle 25.
 
-If these scientists were correct, then the sun may be headed for a Grand Solar Minimum, something we have not witnessed since the late 17th Century.  Since an understanding of solar physics is still in its infancy, we do need to wait another couple of years to see if the prediction is right.
+If these scientists were correct, then the sun may be headed for a Grand Solar Minimum, something we have not witnessed since the late 17th Century.  The Maunder Minimum was a period during which the sun sprouted virtually no sunspots.  Maunder recognized this in not only records of solar observations (which was new at the time), but also in records of auroral activity.  This event lasted some 70 years, and happened to coincide with an uncharacteristically cold period in Europe.  Since then, the solar cycle has picked up and popped out sunspots every 11 years or so.
 
-But, I would suggest the observations of Schwadron et al. are a fourth component that supports, maybe not a complete Grand Solar Minimum, but at least a very enigmatic time in our relationship with the sun.
+One effect of another grand solar minimum would be a prolonged increase in galactic cosmic ray flux into the inner reaches of the solar system.  This is the signal that initially drew me to Schwadron et al.'s results.
+
+### A quiet sun?
+
+A quiet sun doesn't mean a friendly sun, though.  During a prolonged quiet period back in the mid 1800s, the sun cracked out an incredibly intense X-ray flare, which had an associated coronal mass ejection.  This Carrington Event caused fantastic electrical effects within the Earth's [nascent electric grids](link).
+
+A similar event occurred last September 2017, when the sun belched forth the largest X-ray flare in over a decade.  Schwadron et al. (2018) also spend time examining the effects of this event, which thankfully was not aimed at the Earth.  They concluded that ...
+
+So, during what may be an approaching grand minimum, astronauts may face a dual threat - both from the galaxies as well as from an unstable star.
+
+
+### What we don't really know
+
+Looking forward, 
+
 
 
 
