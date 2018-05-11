@@ -45,9 +45,13 @@ The flux of GCRs follows this cycle.  During solar maximum, the GCR flux is low.
 
 When the solar magnetic field is strong, during solar maximum, only a few, very high speed GCRs make it to the Earth.  When the field is weak, during solar minimum, more GCRs can get to us, including lower energy ones.  
 
-And this is normal.  Schwadron et al. provide some fancy images to demonstrate it.  
+And this is normal.  Schwadron et al. provide some fancy images to demonstrate it (([[IMAGE]])).  
 
-What is not normal, is how fast the GCR flux is increasing.  As Schwadron suggests above, it is most likely largely due to what's happening with the sun.
+What is not normal, is how fast the GCR flux is increasing.  As Schwadron suggests above, it is probably because the sun's magnetic field is weakening faster than expected.
+
+### Unknown unknowns
+
+It is sometimes said that, the more you know about something, the more you know you don't know.  Predicting what the sun will or will not do falls deep into that category.  The near term future of our sun is an interesting unexplored territory.  In the next post of this series, we will explore two different forecasts about the sun's coming Cycle 25, and how they intersect with these observations of the cosmic ray flux.
 
 ### ABSTRACT
 
