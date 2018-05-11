@@ -47,15 +47,46 @@ When the solar magnetic field is strong, during solar maximum, only a few, very 
 
 And this is normal.  Schwadron et al. provide some fancy images to demonstrate it (([[IMAGE]])).  
 
-What is not normal, is how fast the GCR flux is increasing.  As Schwadron suggests above, it is probably because the sun's magnetic field is weakening faster than expected.
-
 ### Unknown unknowns
+
+What is not normal, is how fast the GCR flux is increasing.  As Schwadron indicates above, it is most likely due to the sun's magnetic field getting weaker, faster than was forecasted.  But, why wasn't the accelerated weakening forecasted?
 
 It is sometimes said that, the more you know about something, the more you know you don't know.  Predicting what the sun will or will not do falls deep into that category.  The near term future of our sun is an interesting unexplored territory.  In the next post of this series, we will explore two different forecasts about the sun's coming Cycle 25, and how they intersect with these observations of the cosmic ray flux.
 
+### A quiet sun?
+
+On the other end of the spectrum, shouldn't a quiet sun be good for our astronauts?  One of the greatest threats to our employees in space comes from the sun itself, in the form of solar flares and coronal mass ejections (CMEs).  These typically occur when the sun is most active.  However, September of last year the sun flung out the strongest solar flare since 2012
+
 ### ABSTRACT
 
-Over the last decade, the solar wind has exhibited low densities and magnetic field strengths, representing anomalous states that have never been observed during the space age. As discussed by Schwadron et al. (2014a), the cycle 23–24 solar activity led to the longest solar minimum in more than 80 years and continued into the “mini” solar maximum of cycle 24. During this weak activity, we observed galactic cosmic ray fluxes that exceeded the levels observed throughout the space age, and we observed small solar energetic particle events. Here, we provide an update to the Schwadron et al (2014a) observations from the Cosmic Ray Telescope for the Effects of Radiation (CRaTER) on the Lunar Reconnaissance Orbiter (LRO). The Schwadron et al. (2014a) study examined the evolution of the interplanetary magnetic field, and utilized a previously published study by Goelzer et al. (2013) projecting out the interplanetary magnetic field strength based on the evolution of sunspots as a proxy for the rate that the Sun releases coronal mass ejections (CMEs). This led to a projection of dose rates from galactic cosmic rays on the lunar surface, which suggested a ∼ 20% increase of dose rates from one solar minimum to the next, and indicated that the radiation environment in space may be a worsening factor important for consideration in future planning of human space exploration. We compare the predictions of Schwadron et al. (2014a) with the actual dose rates observed by CRaTER in the last 4 years. The observed dose rates exceed the predictions by ∼ 10%, showing that the radiation environment is worsening more rapidly than previously estimated. Much of this increase is attributable to relatively low-energy ions, which can be effectively shielded.  Despite the continued paucity of solar activity, one of the hardest solar events in almost a decade occurred in Sept 2017 after more than a year of all-clear periods. These particle radiation conditions present important issues that must be carefully studied and accounted for in the planning and design of future missions (to the Moon, Mars, asteroids and beyond).
+Over the last decade, the solar wind has exhibited low densities and magnetic
+field strengths, representing anomalous states that have never been observed
+during the space age. As discussed by Schwadron et al. (2014a), the cycle 23–24
+solar activity led to the longest solar minimum in more than 80 years and
+continued into the “mini” solar maximum of cycle 24. During this weak activity,
+we observed galactic cosmic ray fluxes that exceeded the levels observed
+throughout the space age, and we observed small solar energetic particle
+events. Here, we provide an update to the Schwadron et al (2014a) observations
+from the Cosmic Ray Telescope for the Effects of Radiation (CRaTER) on the
+Lunar Reconnaissance Orbiter (LRO). The Schwadron et al. (2014a) study examined
+the evolution of the interplanetary magnetic field, and utilized a previously
+published study by Goelzer et al. (2013) projecting out the interplanetary
+magnetic field strength based on the evolution of sunspots as a proxy for the
+rate that the Sun releases coronal mass ejections (CMEs). This led to a
+projection of dose rates from galactic cosmic rays on the lunar surface, which
+suggested a ∼ 20% increase of dose rates from one solar minimum to the next,
+and indicated that the radiation environment in space may be a worsening factor
+important for consideration in future planning of human space exploration. We
+compare the predictions of Schwadron et al. (2014a) with the actual dose rates
+observed by CRaTER in the last 4 years. The observed dose rates exceed the
+predictions by ∼ 10%, showing that the radiation environment is worsening more
+rapidly than previously estimated. Much of this increase is attributable to
+relatively low-energy ions, which can be effectively shielded.  Despite the
+continued paucity of solar activity, one of the hardest solar events in almost
+a decade occurred in Sept 2017 after more than a year of all-clear periods.
+These particle radiation conditions present important issues that must be
+carefully studied and accounted for in the planning and design of future
+missions (to the Moon, Mars, asteroids and beyond).
 
 
 
