@@ -49,18 +49,17 @@ At this point, it may appear that an increasing GCR flux is just a normal result
 
 ### What's down with the sun?
 
-Back in 2011, the sun was nearing the top of its cycle, solar maximum.  At that time, I [filmed](https://vimeo.com/73185283) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a [few](link) [additional](link) [pieces](https://stonetelescope.wordpress.com/2014/06/27/a-tale-of-two-hemispheres/) to expand on the concept.
+Back in 2011, the sun was nearing the top of its cycle, solar maximum.  At that time, I [filmed](https://vimeo.com/73185283) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a few [additional](https://vimeo.com/99279387) [pieces](https://stonetelescope.wordpress.com/2014/06/27/a-tale-of-two-hemispheres/) to expand on the concept.
 
-[[[ Do work here - link some of Livingston's work.  Figure out how to deal with that footnote ]]]
-First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots [[[footnote: The astronomers made these observations at the McMath-Pierce solar telescope, which bears an uncanny resemblance to the pyramids at Giza.  This telescope was just recently defunded and shut down.]]].  It is well known that, in the vicinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/zeeman.html).  This splitting can be used to estimate the strength of the magnetic field.  [Livingston et al. showed](link) that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 G - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
+First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots [[[footnote: The astronomers made these observations at the McMath-Pierce solar telescope, which bears an uncanny resemblance to the pyramids at Giza.  This telescope was just recently defunded and shut down.]]].  It is well known that, in the vicinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/zeeman.html).  This splitting can be used to estimate the strength of the magnetic field.  [Livingston et al. showed](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2009EO300001) that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 G - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
 
 [image from Livingston]
 
-A [second group](https://gong.nso.edu/) studies sound waves on the sun.  Ripples of gas on the sun, observed as a wiggling Doppler effect on spectral lines, can be analyzed to reveal processes deep within the sun's interior.  A periodic feature the GONG group has identified using these helioseismic studies is the Torsional Oscillation.  This is a specific latitude band of gas inside the sun that rings with its own frequency.  As the solar cycle progresses, this band starts near the equator and moves toward the pole.  The GONG group showed that the strength of this band can be a predictor of the strength of the next solar cycle.  They showed that the torsional oscillation in mid-2011 was extremely weak, indicating an extremely week Cycle 25.
+A [second group](https://gong.nso.edu/) studies sound waves on the sun.  Ripples of gas on the sun, observed as a wiggling Doppler effect on spectral lines, can be analyzed to reveal processes deep within the sun's interior.  A periodic feature the GONG group has identified using these helioseismic studies is the Torsional Oscillation.  This is a specific latitude band of gas inside the sun that rings with its own frequency.  As the solar cycle progresses, this band starts near the equator and moves toward the pole.  [Rachel Howe et al.](https://gong.nso.edu/gallery/disk2k10/data/2010/gong10/rh.pdf) showed that the strength of this band can be a predictor of the strength of the next solar cycle.  They showed that the torsional oscillation in mid-2011 was extremely weak, indicating an extremely week Cycle 25.
 
 [image from GONG]
 
-The third indication came from observations of triply ionized iron spectra within the solar corona.  I did an [interview with Dr. Altrock](https://vimeo.com/116355071) back in 2011 on his observations, but here is the summary.  Triply ionized iron in the sun's corona follows the sun's magnetic field.  As the cycle progresses, this feature progresses from the mid-northern latitudes up to the pole.  The speed and strength of this "Rush to the Poles" indicates the strength of the next solar cycle.  Again, a very weak rush indicated a potentially very weak Cycle 25.
+The third indication came from observations of triply ionized iron spectra within the solar corona, by [Richard Altrock of the Air Force Research Laboratory](https://link.springer.com/article/10.1007%2Fs11207-011-9714-9).  I did an [interview with Dr. Altrock](https://vimeo.com/116355071) back in 2011 on his observations, but here is the summary.  Triply ionized iron in the sun's corona follows the sun's magnetic field.  As the cycle progresses, this feature progresses from the mid-northern latitudes up to the pole.  The speed and strength of this "Rush to the Poles" indicates the strength of the next solar cycle.  Again, a very weak rush indicated a potentially very weak Cycle 25.
 
 [image from Altrock]
 
@@ -72,7 +71,25 @@ The CRaTER observations appear to support the Grand Minimum forecast.  If this i
 
 Every year or so, I check in on the sun.  It has been very quiet lately.  And I wonder, when will my kids next see a sun full of sunspots?  Ten years?  Seventy years?  The measurements and analysis by the CRaTER team seem to suggest the latter.
 
-Then again, the sun is a crafty beast, and could surprise us.  I'll have more to say about this subject in a few upcoming posts.
+However, it's a different world now.  Things have changed in the past seven years since the Grand Minimum forecast.  The sun is a crafty beast.  Stay tuned for the next part in this series...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### ABSTRACT
 
