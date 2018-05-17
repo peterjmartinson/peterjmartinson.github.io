@@ -11,7 +11,7 @@ The quietest spot in the solar system is on the dark side of the full moon. On t
 
 Earlier this year, [Schwadron et al.](http://onlinelibrary.wiley.com/doi/10.1002/2017SW001803/abstract) reported on observations by the Lunar Reconnaissance Orbiter's CRATER instrument (abstract printed below).  This instrument was specially designed to measure cosmic ray intensity when the Sun is shielded behind our moon.  The report states that cosmic ray intensity is now the highest it has been since we started measuring cosmic rays, and it's getting more intense [faster than expected](http://onlinelibrary.wiley.com/doi/10.1002/2014SW001084/epdf).
 
-Cosmic rays are the electrically charged nuclei of atoms, hurtling through space at incredible speeds.  There are two flavors of these little morsels.  One type comes from the sun, and are called _solar energetic particles_, or SEPs.  The other type are generally thought to have been blasted out of supernovae, and then accelerated around the Milky Way and other galaxies by intense intergalactic magnetic fields.  These are called _galactic cosmic rays_, or GCRs.
+Cosmic rays are electrically charged nuclei of atoms, hurtling through space at incredible speeds.  There are two flavors of these little morsels.  One type comes from the sun, and are called _solar energetic particles_, or SEPs.  The other type are generally thought to have been blasted out of supernovae, and then accelerated around the Milky Way and other galaxies by intense intergalactic magnetic fields.  These are called _galactic cosmic rays_, or GCRs.
 
 Both types of speed demon are so small and so fast that a few may have shot through your body in the time it took to read this sentence.  But sometimes, those cosmic rays hit other atoms.  When they do, the effects can range from [cosmic ray showers](https://www.mpi-hd.mpg.de/hfm/CosmicRay/Showers.html), to lightning, cloud formation, [malfunctioning Toyotas](https://www.autoblog.com/2010/03/16/are-radioactive-cosmic-rays-to-blame-for-unintended-acceleration/), [heart attacks](https://www.heartrhythmjournal.com/article/S1547-5271%2808%2900481-5/fulltext), cancer, or even [evolution](http://21sci-tech.com/Articles_2010/New_Periodic.pdf).
 
@@ -27,7 +27,11 @@ They combined cosmic ray measurements made by CRaTER with those made by the [Adv
 
 They noted that, based on GCR flux measured by ACE during the previous solar minimum (~2009), male astronauts would have reached their recommended limit of GCR exposure within 400 days, and female astronauts would have reached theirs within 300.  Based on forecasts of the next solar minimum (~2019), the CRaTER observations indicated exposure times would decrease by about 20%:  about 320 days for male astronauts, and about 240 days for female.  Given about six months to travel from Earth to Mars, and then six months back, a crew would easily exceed their GCR dose rates and enter dangerous territory.
 
+[schwadron_2014_chart]
+
 In the latest paper, [Update on the worsening particle radiation environment observed by CRaTER and implications for future human deep-space exploration](http://onlinelibrary.wiley.com/doi/10.1002/2017SW001803/abstract), Schwadron et al. revisit this prediction, since we're almost in the middle of solar minimum.  Their conclusion?  The 2014 paper overestimated the friskiness of our sun, and underestimated the intensity of GCRs, by about 10%.  In other words, astronauts will be able to spend even less time than expected in deep space, because the cosmic ray environment was getting worse faster than expected.
+
+[schwadron_2018_chart]
 
 Why was their prediction so far off?
 
@@ -45,13 +49,13 @@ The flux of GCRs follows this cycle.  During solar maximum, the GCR flux is low.
 
 When the solar magnetic field is strong, during solar maximum, only a few, very high speed GCRs make it to the Earth.  When the field is weak, during solar minimum, more GCRs can get to us, including lower energy ones.  
 
-At this point, it may appear that an increasing GCR flux is just a normal result of the approach to solar minimum, though this minimum may be some kind of super-minimum, and it's approaching super fast.  However, that is not the only story about the sun.
+At this point, it may appear that an increasing GCR flux is just a normal result of the approach to solar minimum, though this minimum may be some kind of really deep minimum, and it's approaching super fast.  However, that is not the only story about the sun.
 
 ### What's down with the sun?
 
 Back in 2011, the sun was nearing the top of its cycle, solar maximum.  At that time, I [filmed](https://vimeo.com/73185283) a pedagogical video on a prediction that was made by three sets of researchers.  They forecasted that, based on observation and theory, the sun was going into a severe quiet period.  I followed that video with a few [additional](https://vimeo.com/99279387) [pieces](https://stonetelescope.wordpress.com/2014/06/27/a-tale-of-two-hemispheres/) to expand on the concept.
 
-First, Livingston et al. were in the business of observing the solar spectrum inside of sunspots [[[footnote: The astronomers made these observations at the McMath-Pierce solar telescope, which bears an uncanny resemblance to the pyramids at Giza.  This telescope was just recently defunded and shut down.]]].  It is well known that, in the vicinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/zeeman.html).  This splitting can be used to estimate the strength of the magnetic field.  [Livingston et al. showed](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2009EO300001) that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 G - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
+First, [Livingston et al.](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2009EO300001) were in the business of observing the solar spectrum inside of sunspots [[[footnote: The astronomers made these observations at the McMath-Pierce solar telescope, which bears an uncanny resemblance to the pyramids at Giza.  This telescope was just recently defunded and shut down.]]].  It is well known that, in the vicinity of a strong magnetic field, spectral lines can split into multiple lines - this is the so-called [Zeeman effect](http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/zeeman.html).  This splitting can be used to estimate the strength of the magnetic field.  [Livingston et al. showed](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2009EO300001) that the strongest magnetic field found in the smallest sunspots was about 1500 Gauss.  They also showed that the average strength of magnetic field in the sunspots was trending down over time.  They forecasted that, based on that trend, the next solar cycle may not produce a magnetic field stronger than 1500 G - in other words, the sun may not have enough oomph to produce sunspots during Cycle 25.
 
 [image from Livingston]
 
