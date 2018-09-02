@@ -76,7 +76,7 @@ The CRaTER observations appear to support the Grand Minimum forecast.  If this i
 
 Every year or so, I check in on the sun.  It has been very quiet lately.  And I wonder, when will my kids next see a sun full of sunspots?  Ten years?  Seventy years?  The measurements and analysis by the CRaTER team seem to suggest the latter.
 
-However, it's a different world now.  Things have changed in the past seven years since the Grand Minimum forecast.  The sun is a crafty beast.  Stay tuned for the next part in this series...
+However, it's a different world now, and things have changed in the past seven years since the Grand Minimum forecast.  The sun is a crafty beast, and is not following the forecast.  Stay tuned for the next part in this series...
 
 
 
